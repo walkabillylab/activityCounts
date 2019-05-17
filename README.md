@@ -7,9 +7,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/Javad-mun/activityCounts.svg?branch=master)](https://travis-ci.org/Javad-mun/activityCounts)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/Javad-mun/activityCounts?branch=master&svg=true)](https://ci.appveyor.com/project/Javad-mun/activityCounts)
+status](https://travis-ci.org/walkabillylab/activityCounts.svg?branch=master)](https://travis-ci.org/walkabillylab/activityCounts)
 <!-- badges: end -->
 
 The goal of activityCounts is to calculate ActiLife counts based on the
