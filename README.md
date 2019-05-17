@@ -2,33 +2,33 @@
 <img src='man/figures/logo.png' align="right" height="72.5" />
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rubin
+# activityCounts
 
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/Javad-mun/rubin.svg?branch=master)](https://travis-ci.org/Javad-mun/rubin)
+status](https://travis-ci.org/Javad-mun/activityCounts.svg?branch=master)](https://travis-ci.org/Javad-mun/activityCounts)
 [![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/Javad-mun/rubin?branch=master&svg=true)](https://ci.appveyor.com/project/Javad-mun/rubin)
+status](https://ci.appveyor.com/api/projects/status/github/Javad-mun/activityCounts?branch=master&svg=true)](https://ci.appveyor.com/project/Javad-mun/activityCounts)
 <!-- badges: end -->
 
-The goal of rubin is to calculate ActiLife counts based on the raw
-acceleration data.
+The goal of activityCounts is to calculate ActiLife counts based on the
+raw acceleration data.
 
 ## Installation
 
-You can install the released version of rubin from
+You can install the released version of activityCounts from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("rubin")
+install.packages("activityCounts")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("Javad-mun/rubin")
+devtools::install_github("walkabillylab/activityCounts")
 ```
 
 ## Example
@@ -36,6 +36,6 @@ devtools::install_github("Javad-mun/rubin")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(rubin)
+library(activityCounts)
 ## basic example code
 ```
