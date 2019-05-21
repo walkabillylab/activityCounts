@@ -83,7 +83,9 @@ counts = function(data, filesf) {
     fx8up = filter(B, A, datab)
     fx8 = pptrunc(fx8up[seq(1, length(fx8up), 3)], peakThreshold)
     out = cbind(out, runsum(floor(trunc(abs(fx8), deadband) / adcResolution), integN, 0))
+
   }
 
+  colnames(out) = c("item","x","y","z")
   return(out)
 }

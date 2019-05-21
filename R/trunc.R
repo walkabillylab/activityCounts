@@ -8,8 +8,8 @@
 #'
 #' @examples
 #' \donttest{
-#' trunc(4,3)  # returns 4
-#' trunc(2,3)  # returns 0
+#' trunc(4,3)
+#' trunc(2,3)
 #' }
 trunc = function(data, min_value){
   return(ifelse(data < min_value, 0, data))
