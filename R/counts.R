@@ -1,7 +1,7 @@
 #' counts
 #'
 #' @param data inout data
-#' @param filesf sampleing frequency
+#' @param filesf sampling frequency
 #'
 #' @import seewave
 #' @importFrom  signal filter
@@ -9,7 +9,11 @@
 #' @export
 #'
 #'
-#' @return returns the number of count which will be used inside tha main function
+#' @return Returns a \code{data.table} with three columns: \describe{
+#' \item{x}{the number of counts for X axis}
+#' \item{y}{the number of counts for Y axis}
+#' \item{z}{the number of counts for Z axis}
+#' }
 #'
 counts = function(data, filesf) {
   A = c(
@@ -86,6 +90,6 @@ counts = function(data, filesf) {
 
   }
 
-  colnames(out) = c("item","x","y","z")
+  colnames(out) = c("x","y","z")
   return(out)
 }

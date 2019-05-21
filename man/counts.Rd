@@ -9,10 +9,14 @@ counts(data, filesf)
 \arguments{
 \item{data}{inout data}
 
-\item{filesf}{sampleing frequency}
+\item{filesf}{sampling frequency}
 }
 \value{
-returns the number of count which will be used inside tha main function
+Returns a \code{data.table} with three columns: \describe{
+\item{x}{the number of counts for X axis}
+\item{y}{the number of counts for Y axis}
+\item{z}{the number of counts for Z axis}
+}
 }
 \description{
 counts

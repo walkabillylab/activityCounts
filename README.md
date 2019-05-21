@@ -37,8 +37,8 @@ library(activityCounts)
 ```
 
 When the package is loaded, there are two datasets available for testing
-the main function, . Use the counts() function and the sampleXYZ dataset
-to calculate counts for a sampling frequency of 100.
+the main function, counts. Use the counts() function and the sampleXYZ
+dataset to calculate counts for a sampling frequency of 100.
 
 ``` r
 calculated_output <- counts(sampleXYZ,100)
@@ -46,8 +46,3 @@ calculated_output <- counts(sampleXYZ,100)
 
 To verify the accuracy of the calculated counts for this particular
 dataset,we can compare them with the provided sampleoutput dataset.
-
-``` r
-all(calculated_output == sampleOutput)
-#> [1] TRUE
-```
