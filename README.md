@@ -1,5 +1,4 @@
 
-<img src='man/figures/logo.png' align="right" height="72.5" />
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # activityCounts
