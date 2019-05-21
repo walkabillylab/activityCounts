@@ -30,9 +30,24 @@ devtools::install_github("walkabillylab/activityCounts")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use this package:
 
 ``` r
 library(activityCounts)
-## basic example code
+```
+
+When the package is loaded, there are two datasets available for testing
+the main function, . Use the counts() function and the sampleXYZ dataset
+to calculate counts for a sampling frequency of 100.
+
+``` r
+calculated_output <- counts(sampleXYZ,100)
+```
+
+To verify the accuracy of the calculated counts for this particular
+dataset,we can compare them with the provided sampleoutput dataset.
+
+``` r
+all(calculated_output == sampleOutput)
+#> [1] TRUE
 ```
