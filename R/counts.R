@@ -1,7 +1,7 @@
 #' counts
 #'
 #' @param data input accelerometer data, x y z
-#' @param filesf sampling frequency, Hz
+#' @param hertz sampling frequency, Hz
 #'
 #' @import seewave
 #' @importFrom  signal filter
@@ -21,7 +21,8 @@
 #' }
 #'
 #'
-counts = function(data, filesf) {
+counts = function(data, hertz) {
+
   A = c(
     1,
     -4.1637,
@@ -78,8 +79,8 @@ counts = function(data, filesf) {
   out = NULL
 
   for (i in 1:ncol(data)) {
-    if (filesf > sf) {
-      datares = resamp(data[, i], filesf, sf, 'matrix')
+    if (hertz > sf) {
+      datares = resamp(data[, i], hertz, sf, 'matrix')
     }
     datab = bwfilter(
       datares,

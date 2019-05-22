@@ -4,12 +4,12 @@
 \alias{counts}
 \title{counts}
 \usage{
-counts(data, filesf)
+counts(data, hertz)
 }
 \arguments{
 \item{data}{input accelerometer data, x y z}
 
-\item{filesf}{sampling frequency, Hz}
+\item{hertz}{sampling frequency, Hz}
 }
 \value{
 Returns a \code{data.table} with three columns: \describe{

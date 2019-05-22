@@ -76,7 +76,7 @@ To generate the counts, provide the function `counts()` with your data and the s
 ```{r eval=FALSE}
 # assume sampling frequency is 100 Hz
 sampling_frequency <- 100 
-counts_measures <- activityCounts::counts(data = raw_accel_data, filesf = sampling_frequency)
+counts_measures <- activityCounts::counts(data = raw_accel_data, hertz = sampling_frequency)
 ```
 
 Now the variable `counts_measures` contains three columns which indicate the calculated counts for X, Y, and Z axes respectively.
@@ -94,6 +94,6 @@ head(sampleXYZ)
 Now by applying the function `counts()` calculate the counts for sampleXYZ.
 
 ```{r}
-sampleXYZ_counts <- counts(data = sampleXYZ, filesf = 100)
+sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100)
 head(sampleXYZ_counts)
 ```
