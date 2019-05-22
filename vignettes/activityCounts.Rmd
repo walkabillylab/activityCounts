@@ -14,6 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+#### The goal of activityCounts is to calculate ActiLife counts based on the raw acceleration data.
+
 <style>
 body{
 text-align : justify;
