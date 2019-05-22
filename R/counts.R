@@ -1,5 +1,7 @@
 #' counts
 #'
+#' Calculated ActiLife counts based on raw accelerometer data
+#'
 #' @param data input accelerometer data, x y z
 #' @param hertz sampling frequency, Hz
 #'
