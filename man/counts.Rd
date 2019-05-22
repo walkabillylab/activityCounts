@@ -21,3 +21,10 @@ Returns a \code{data.table} with three columns: \describe{
 \description{
 counts
 }
+\examples{
+{
+\donttest{counts(sampleXYZ,100)}
+}
+
+
+}

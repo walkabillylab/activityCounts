@@ -15,8 +15,5 @@
 #'@usage
 #' \donttest{sampleXYZ}
 #'
-#'@example
-#' {\donttest{counts(sampleXYZ,100)}}
-#'
 #'
 "sampleXYZ"

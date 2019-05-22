@@ -15,6 +15,12 @@
 #' \item{z}{the number of counts for Z axis}
 #' }
 #'
+#' @examples
+#' {
+#' \donttest{counts(sampleXYZ,100)}
+#' }
+#'
+#'
 counts = function(data, filesf) {
   A = c(
     1,
