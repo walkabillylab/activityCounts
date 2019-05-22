@@ -16,7 +16,4 @@ Suggests:
 VignetteBuilder: knitr
 Imports: 
     seewave,
-    data.table,
-    stats,
-    utils,
     signal
