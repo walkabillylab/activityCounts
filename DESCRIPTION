@@ -13,6 +13,7 @@ RoxygenNote: 6.1.1
 Suggests: 
     knitr,
     rmarkdown,
+    ggplot2
 VignetteBuilder: knitr
 Imports: 
     seewave,
