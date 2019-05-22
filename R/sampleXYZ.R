@@ -12,8 +12,7 @@
 #'  \item{accelerometer Z}{accelerometer data in Z direction}
 #'  }
 #'
-#'@usage
-#' \donttest{sampleXYZ}
+#'@usage sampleXYZ
 #'
 #'
 "sampleXYZ"

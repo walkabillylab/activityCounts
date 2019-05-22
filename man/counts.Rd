@@ -7,9 +7,9 @@
 counts(data, filesf)
 }
 \arguments{
-\item{data}{inout data}
+\item{data}{input accelerometer data, x y z}
 
-\item{filesf}{sampling frequency}
+\item{filesf}{sampling frequency, Hz}
 }
 \value{
 Returns a \code{data.table} with three columns: \describe{

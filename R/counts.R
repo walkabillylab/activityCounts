@@ -1,7 +1,7 @@
 #' counts
 #'
-#' @param data inout data
-#' @param filesf sampling frequency
+#' @param data input accelerometer data, x y z
+#' @param filesf sampling frequency, Hz
 #'
 #' @import seewave
 #' @importFrom  signal filter

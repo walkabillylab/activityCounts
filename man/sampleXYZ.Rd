@@ -10,7 +10,7 @@
  \item{accelerometer Z}{accelerometer data in Z direction}
  }}
 \usage{
-\donttest{sampleXYZ}
+sampleXYZ
 }
 \description{
 A simple \code{data.table} that contains raw accelerometer data for testing the
