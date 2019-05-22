@@ -97,3 +97,22 @@ Now by applying the function `counts()` calculate the counts for sampleXYZ.
 sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100)
 head(sampleXYZ_counts)
 ```
+
+
+The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes.  And finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
+
+
+```{r message=FALSE, warning=FALSE}
+summary(sampleCounts)
+```
+
+As the summary shows, the counts calculated by activityCounts package and the software ActiLife are very close. In these plots, counts calculated by the package are sketched versus the counts calculated by the ActiLife software. The straight lines show strong correlations: 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_x_counts,y= activityCounts_x_counts))+ geom_point() 
+ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_y_counts,y= activityCounts_y_counts))+ geom_point() 
+ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_z_counts,y= activityCounts_z_counts))+ geom_point()
+
+```
+

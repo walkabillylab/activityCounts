@@ -19,7 +19,7 @@ Returns a \code{data.table} with three columns: \describe{
 }
 }
 \description{
-Calculated Actilife counts based on raw accelerometer data
+Calculated ActiLife counts based on raw accelerometer data
 }
 \examples{
 {
