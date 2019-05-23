@@ -4,6 +4,10 @@
 #'
 #' @param data input accelerometer data, x y z
 #' @param hertz sampling frequency, Hz
+#' @param x_axis indicates the column number which has the data for x direction, the default is 1
+#' @param y_axis indicates the column number which has the data for y direction, the default is 2
+#' @param z_axis indicates the column number which has the data for z direction, the default is 3
+#'
 #'
 #' @import seewave
 #' @importFrom  signal filter
