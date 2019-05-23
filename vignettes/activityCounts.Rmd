@@ -63,7 +63,7 @@ library(activityCounts)
 ## Import your data
 To generate the counts, import your data from your source file. Store the data inside a variable so you can pass that the main function of the package, `counts()`. 
 For example, you can use the `fread()` function from the `data.table` package to import your data:
-Note that the dataset must have three columns which X, Y, and Z readings respectively.
+Note that the dataset must have three columns which X, Y, and Z readings.
 
 ``` r
 # install.packages("data.table")
@@ -84,13 +84,15 @@ Now the variable `counts_measures` contains three columns which indicate the cal
 <br>
 
 # Example
-activityCounts package includes a sample dataset which by importing the package is available for testing. The name of the dataset is `sampleXYZ` and its sampling frequency is 100Hz. To check out sampleXYZ:
+## Check the sample input dataset:
+activityCounts package includes a sample dataset which is available for testing by importing the package. The name of the dataset is `sampleXYZ` and its sampling frequency is 100Hz. To check out sampleXYZ:
 
 ```{r}
 library(activityCounts)
 head(sampleXYZ)
 ```
 
+## How to calculates counts:
 Now by applying the function `counts()` calculate the counts for sampleXYZ.
 
 ```{r}
@@ -98,6 +100,20 @@ sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100)
 head(sampleXYZ_counts)
 ```
 
+### Use your own data:
+
+By default, the first column of your dataset should contain accelerometer data for x-direction, second column for y and the third column for the z-direction. However, you can specifically tell the counts() function which columns have the x, y, and z-direction data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each direction.
+In this example, the first column has the data for the z-axes, and the fourth column of the data has the data for x-axis, and the sixth column contains the data for the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call the function like this:
+
+
+```{r eval=FALSE}
+calculated_output <- counts(data = your_raw_data,hertz = 50,x_axis = 4 , y_axis = 6,z_axis = 1)
+
+```
+The default values for x_axis, y_axis, and z_axis are one, two, and three respectively. So if you don't specify them, the function assumes the first column is for the x-axis, the second for the y-axis and the third is for the z-axis.
+
+
+## Compare the sample outputs:
 
 The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes.  And finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
 
@@ -105,6 +121,8 @@ The other dataset that comes with this package has nine columns; the first three
 ```{r message=FALSE, warning=FALSE}
 summary(sampleCounts)
 ```
+
+## Visualize the difference:
 
 As the summary shows, the counts calculated by activityCounts package and the software ActiLife are very close. In these plots, counts calculated by the package are sketched versus the counts calculated by the ActiLife software. The straight lines show strong correlations: 
 

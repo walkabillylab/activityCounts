@@ -48,6 +48,27 @@ when calling the function counts:
 calculated_output <- counts(data = sampleXYZ,hertz = 100)
 ```
 
+By default, the first column of your dataset should contain
+accelerometer data for x-direction, second column for y and the third
+column for the z-direction. However, you can specifically tell the
+counts() function which columns have the x, y, and z-direction data. Use
+x\_axis, y\_axis, and z\_axis arguments when calling the function to
+specify the desired columns for each direction. In this example, the
+first column has the data for the z-axes, and the fourth column of the
+data has the data for x-axis, and the sixth column contains the data for
+the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call
+the function like
+this:
+
+``` r
+calculated_output <- counts(data = your_raw_data,hertz = 50,x_axis = 4 , y_axis = 6,z_axis = 1)
+```
+
+The default values for x\_axis, y\_axis, and z\_axis are one, two, and
+three respectively. So if you don’t specify them, the function assumes
+the first column is for the x-axis, the second for the y-axis and the
+third is for the z-axis.
+
 To verify the accuracy of the calculated counts for this particular
 dataset, you can compare them with the provided sampleCounts dataset. It
 contains counts calculated by ActiLife software and the counts()
