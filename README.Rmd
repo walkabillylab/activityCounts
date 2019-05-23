@@ -41,7 +41,7 @@ devtools::install_github("walkabillylab/activityCounts")
 Note that your dataset should contain three columns. The first column is the raw accelerometer data in the x-direction and the second and the third columns are raw accelerometer data in y and z-directions, respectively. There is sample dataset available with this package which you can check to make sure your data format is correct. To see the sample dataset run:
 
 
-```{r  eval=FALSE}
+```{r  }
 library(activityCounts)
 View(sampleXYZ)
 
@@ -50,8 +50,8 @@ View(sampleXYZ)
 ### Calculate counts
 To calculate counts for your data, use the counts() function. Here is an example of using the counts() function. We use sampleXYZ dataset included in the package and then call the counts() function. The sampling frequency of our data is 100 Hz, so we need to pass this value when calling the function counts:
 
-```{r}
-calculated_output <- counts(data = sampleXYZ,hertz = 100)
+```{r eval=FALSE}
+calculated_output <- counts(data = sampleXYZ, hertz = 100)
 ```
 
 ### Use custom datasets formats
@@ -69,7 +69,7 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 ### Check the results
 To verify the accuracy of the calculated counts for this particular dataset, you can compare them with the provided sampleCounts dataset. It contains counts calculated by ActiLife software and the counts() function.
 
-```{r}
+```{r eval=FALSE}
 summary(sampleCounts)
 ```
 
