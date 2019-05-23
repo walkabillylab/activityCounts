@@ -70,7 +70,7 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 To verify the accuracy of the calculated counts for this particular dataset, you can compare them with the provided sampleCounts dataset. It contains counts calculated by ActiLife software and the counts() function.
 
 ```{r}
-Summary(sampleCounts)
+summary(sampleCounts)
 ```
 
 
