@@ -23,4 +23,11 @@ A simple \code{data.table} which its three first rows are raw accelerometer data
  \code{\link{counts}} function. The first three rows are identical to the other included dataset, \code{sampleXYZ},  Sampling frequency is 100H. The second three rows are counts calculated by the
   package \code{activityCounts} and the last three row are counts calculated by the ActiLife software.
 }
+\seealso{
+\link{counts}
+ to see how to produce counts.
+
+ \link{sampleXYZ}
+ raw accelerometer data for testing \code{counts()} function.
+}
 \keyword{datasets}

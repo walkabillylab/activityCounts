@@ -26,5 +26,11 @@ Calculated ActiLife counts based on raw accelerometer data
 \donttest{counts(sampleXYZ,100)}
 }
 
+}
+\seealso{
+\link{sampleXYZ}
+ raw accelerometer data for testing \code{counts()} function.
 
+ \link{sampleCounts}
+ counts calculated by a\code{ctivityCounts} and ActiLife
 }

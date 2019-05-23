@@ -14,5 +14,14 @@
 #'
 #'@usage sampleXYZ
 #'
+#' @seealso
+#'
+#'   \link{counts}
+#'  to see how to produce counts.
+#'
+#'  \link{sampleCounts}
+#'  counts calculated by a\code{ctivityCounts} and ActiLife
+#'
+#'
 #'
 "sampleXYZ"

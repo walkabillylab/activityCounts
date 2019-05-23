@@ -20,5 +20,13 @@
 #'
 #'@usage sampleCounts
 #'
+#'@seealso
+#' \link{counts}
+#'  to see how to produce counts.
+#'
+#'  \link{sampleXYZ}
+#'  raw accelerometer data for testing \code{counts()} function.
+#'
+#'
 #'
 "sampleCounts"

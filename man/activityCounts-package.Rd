@@ -20,8 +20,8 @@ There are two datasets and a main function in this package
  \link{sampleXYZ}
  raw accelerometer data for testing \code{counts()} function.
 
- \link{activityCounts}
- raw accelerometer data for testing \code{counts()} function.
+ \link{sampleCounts}
+ counts calculated by a\code{ctivityCounts} and ActiLife
 }
 \author{
 Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller.

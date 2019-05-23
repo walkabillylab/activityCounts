@@ -17,4 +17,11 @@ A simple \code{data.table} that contains raw accelerometer data for testing the
  \code{\link{counts}} function. Sampling frequency of this \code{data.table} is 100Hz, therefore pass
  100 as the second argument when using the \code{\link{counts}} function.
 }
+\seealso{
+\link{counts}
+ to see how to produce counts.
+
+ \link{sampleCounts}
+ counts calculated by a\code{ctivityCounts} and ActiLife
+}
 \keyword{datasets}

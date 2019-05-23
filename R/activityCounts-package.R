@@ -13,8 +13,8 @@
 #'  \link{sampleXYZ}
 #'  raw accelerometer data for testing \code{counts()} function.
 #'
-#'  \link{activityCounts}
-#'  raw accelerometer data for testing \code{counts()} function.
+#'  \link{sampleCounts}
+#'  counts calculated by a\code{ctivityCounts} and ActiLife
 #'
 #'
 #'
