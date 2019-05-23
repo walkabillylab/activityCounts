@@ -14,35 +14,48 @@ raw acceleration data.
 
 ## Installation
 
-You can install the released version of activityCounts from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("activityCounts")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
 ```
 
-## Example
+## How to use
 
-This is a basic example which shows you how to use this package:
+### import the accelerometer data
+
+Note that your dataset should contain three columns. First column is the
+raw accelerometer data in X direction and the second and the third
+columns are raw accelerometer data in Y and Z directions respectively.
+There is sample dataset available with this package which you can check
+to make sure your data format is correct. to see the sample dataset run:
 
 ``` r
 library(activityCounts)
+View(sampleXYZ)
 ```
 
-When the package is loaded, there are two datasets available for testing
-the main function, counts. Use the counts() function and the sampleXYZ
-dataset to calculate counts for a sampling frequency of 100.
+To calculate counts for your data, use the counts() function. Here is an
+example of using the counts() function. We use sampleXYZ dataset
+included in the package and then call the counts() function. The
+sampling frequency of our data is 100 Hz so we need to pass this value
+when calling the fucntion counts:
 
 ``` r
-calculated_output <- counts(sampleXYZ,100)
+calculated_output <- counts(data = sampleXYZ,hertz = 100)
 ```
 
 To verify the accuracy of the calculated counts for this particular
-dataset,we can compare them with the provided sampleoutput dataset.
+dataset,we can compare them with the provided sampleCounts dataset. It
+contains counts calculated by ActiLife software and the counts()
+function.
+
+For more information, visit the [GitHub
+repo](https://github.com/walkabillylab/activityCounts), and to see the
+package help page use:
+
+``` r
+?activityCounts
+```
