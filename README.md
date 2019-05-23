@@ -47,7 +47,7 @@ sampling frequency of our data is 100 Hz, so we need to pass this value
 when calling the function counts:
 
 ``` r
-calculated_output <- counts(data = sampleXYZ,hertz = 100)
+calculated_output <- counts(data = sampleXYZ, hertz = 100)
 ```
 
 ### Use custom datasets formats

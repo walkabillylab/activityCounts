@@ -57,7 +57,7 @@ calculated_output <- counts(data = sampleXYZ, hertz = 100)
 ### Use custom datasets formats
 By default, the first column of your dataset should contain accelerometer data for x-direction, second column for y and the third column for the z-direction. However, you can specifically tell the counts() function which columns have the x, y, and z-direction data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each direction.
 In this example, the first column has the data for the z-axis, and the fourth column of the data has the data for x-axis, and the sixth column contains the data for the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call the function like this:
-
+ 
 
 ```{r eval=FALSE}
 calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
