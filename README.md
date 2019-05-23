@@ -24,7 +24,7 @@ devtools::install_github("walkabillylab/activityCounts")
 
 ## How to use
 
-### import the accelerometer data
+### Import the accelerometer data
 
 Note that your dataset should contain three columns. The first column is
 the raw accelerometer data in the X direction and the second and the
