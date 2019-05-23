@@ -1,6 +1,6 @@
 #' counts
 #'
-#' Calculated ActiLife counts based on raw accelerometer data
+#' Calculates ActiLife counts based on raw accelerometer data
 #'
 #' @param data input accelerometer data, x y z
 #' @param hertz sampling frequency, Hz
@@ -32,7 +32,9 @@
 #'
 #'
 #'
-counts = function(data, hertz) {
+counts = function(data, hertz, x_axis=1 ,y_axis=2, z_axis =3) {
+
+  data = data[,c(x_axis,y_axis,z_axis)]
 
   A = c(
     1,

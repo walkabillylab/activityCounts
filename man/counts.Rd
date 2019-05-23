@@ -4,12 +4,18 @@
 \alias{counts}
 \title{counts}
 \usage{
-counts(data, hertz)
+counts(data, hertz, x_axis = 1, y_axis = 2, z_axis = 3)
 }
 \arguments{
 \item{data}{input accelerometer data, x y z}
 
 \item{hertz}{sampling frequency, Hz}
+
+\item{x_axis}{indicates the column number which has the data for x direction, the default is 1}
+
+\item{y_axis}{indicates the column number which has the data for y direction, the default is 2}
+
+\item{z_axis}{indicates the column number which has the data for z direction, the default is 3}
 }
 \value{
 Returns a \code{data.table} with three columns: \describe{
@@ -19,7 +25,7 @@ Returns a \code{data.table} with three columns: \describe{
 }
 }
 \description{
-Calculated ActiLife counts based on raw accelerometer data
+Calculates ActiLife counts based on raw accelerometer data
 }
 \examples{
 {
