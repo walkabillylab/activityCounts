@@ -10,4 +10,9 @@
 
 Creates ActiLife counts based on the raw acceleration data.
 }
+\author{
+Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller.
+
+\subsection{Maintainers}{SeyedJavad KhataeiPour <skhataeipour@mun.ca>, Javad Rahimipour Anaraki <jra066@mun.ca>, Daniel Fuller <dfuller@mun.ca>}
+}
 \keyword{internal}
