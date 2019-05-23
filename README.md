@@ -27,8 +27,8 @@ devtools::install_github("walkabillylab/activityCounts")
 ### Import the accelerometer data
 
 Note that your dataset should contain three columns. The first column is
-the raw accelerometer data in the X direction and the second and the
-third columns are raw accelerometer data in Y and Z directions,
+the raw accelerometer data in the x-direction and the second and the
+third columns are raw accelerometer data in y and z-directions,
 respectively. There is sample dataset available with this package which
 you can check to make sure your data format is correct. To see the
 sample dataset run:
@@ -50,7 +50,7 @@ when calling the function counts:
 calculated_output <- counts(data = sampleXYZ,hertz = 100)
 ```
 
-### Use costum datasets formats
+### Use custom datasets formats
 
 By default, the first column of your dataset should contain
 accelerometer data for x-direction, second column for y and the third
@@ -58,14 +58,14 @@ column for the z-direction. However, you can specifically tell the
 counts() function which columns have the x, y, and z-direction data. Use
 x\_axis, y\_axis, and z\_axis arguments when calling the function to
 specify the desired columns for each direction. In this example, the
-first column has the data for the z-axes, and the fourth column of the
+first column has the data for the z-axis, and the fourth column of the
 data has the data for x-axis, and the sixth column contains the data for
 the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call
 the function like
 this:
 
 ``` r
-calculated_output <- counts(data = your_raw_data,hertz = 50,x_axis = 4 , y_axis = 6,z_axis = 1)
+calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
 ```
 
 The default values for x\_axis, y\_axis, and z\_axis are one, two, and
