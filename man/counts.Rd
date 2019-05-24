@@ -4,7 +4,7 @@
 \alias{counts}
 \title{counts}
 \usage{
-counts(data, hertz, x_axis = 1, y_axis = 2, z_axis = 3)
+counts(data, hertz = -1, x_axis = 1, y_axis = 2, z_axis = 3)
 }
 \arguments{
 \item{data}{input accelerometer data, x y z}

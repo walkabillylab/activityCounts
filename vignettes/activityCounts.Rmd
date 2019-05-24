@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 
-#### The goal of activityCounts is to calculate ActiLife counts based on the raw acceleration data.
+#### Calculate ActiLife counts from raw acceleration data
 
 <style>
 body{
@@ -25,7 +25,7 @@ line-height: 1.8em;
 </style>
 
 # Introduction
-Health and activity researchers have used accelerometers to study people's movement and activity. There are different brands of accelerometers, and one of the most common ones is Actigraph. Actigraph has a closed source software, ActiLife, which produces a measurement called counts. Although there are many other accelerometers brands, none of them have software to generate the counts measure as Actigraph does.<br> Since there are many studies done using actigraph counts, Brond et al. developed a code in Matlab, which can convert accelerometers data to actigraph counts. Although their work can help researchers to use different accelerometers brands and calculate the counts measure, Matlab is a commercial program. Unlike Matlab, R is open source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actigraph counts very quickly.
+Health and activity researchers have used accelerometers to study people's movement and activity. There are different brands of accelerometers, and one of the most common ones is Actigraph. ActiLife is a closed-source software, which generates activity counts. There are many other accelerometer devices, for which none of them have software to generate activity counts as ActiLife.<br> Since there are many studies done using actigraph counts, Brond et al. developed a code in Matlab, which can convert accelerometers data to actigraph counts. Although their work can help researchers to use different accelerometers brands and calculate the counts measure, Matlab is a commercial program. Unlike Matlab, R is open-source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actigraph counts very quickly.
 
 <br>
 
@@ -107,7 +107,7 @@ In this example, the first column has the data for the z-axes, and the fourth co
 
 
 ```{r eval=FALSE}
-calculated_output <- counts(data = your_raw_data,hertz = 50,x_axis = 4 , y_axis = 6,z_axis = 1)
+calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
 
 ```
 The default values for x_axis, y_axis, and z_axis are one, two, and three respectively. So if you don't specify them, the function assumes the first column is for the x-axis, the second for the y-axis and the third is for the z-axis.
@@ -115,7 +115,7 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 
 ## Compare the sample outputs:
 
-The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes.  And finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
+The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes. Finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
 
 
 ```{r message=FALSE, warning=FALSE}
@@ -128,9 +128,9 @@ As the summary shows, the counts calculated by activityCounts package and the so
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
-ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_x_counts,y= activityCounts_x_counts))+ geom_point() 
-ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_y_counts,y= activityCounts_y_counts))+ geom_point() 
-ggplot(data = sampleCounts[1:2700,], aes(x=ActiLife_z_counts,y= activityCounts_z_counts))+ geom_point()
+ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_x_counts, y = activityCounts_x_counts)) + geom_point() 
+ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_y_counts, y = activityCounts_y_counts)) + geom_point() 
+ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_z_counts, y = activityCounts_z_counts)) + geom_point()
 
 ```
 

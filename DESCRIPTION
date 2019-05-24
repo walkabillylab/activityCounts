@@ -3,7 +3,7 @@ Type: Package
 Title: Generating ActiLife Counts
 Version: 0.1.0
 Author: Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller
-Maintainer: SeyedJavad KhataeiPour <skhataeipour@mun.ca>, Javad Rahimipour Anaraki <jra066@mun.ca>, Daniel Fuller <dfuller@mun.ca>
+Maintainer: SeyedJavad KhataeiPour <skhataeipour@mun.ca>
 Description: Creates ActiLife counts based on the raw acceleration data.
 Depends: R (>= 2.10)
 License: GPL-3
