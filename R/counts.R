@@ -43,7 +43,7 @@ counts = function(data,
                   z_axis = 3) {
   if (hertz == -1) {
     warning("Sampling frequency is not assigned! (The default value is set to 30Hz)")
-    hertz = 100
+    hertz = 30
   }
 
   data = data[, c(x_axis, y_axis, z_axis)]
