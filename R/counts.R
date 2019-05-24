@@ -95,7 +95,7 @@ counts = function(data, hertz, x_axis=1 ,y_axis=2, z_axis =3) {
   gain = 0.965
   out = NULL
 
-  for (i in 1:ncol(data)) {
+  for (i in 1:3) {
     if (hertz > sf) {
       datares = resamp(data[, i], hertz, sf, 'matrix')
     }
