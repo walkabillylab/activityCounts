@@ -4,7 +4,8 @@
 \alias{counts}
 \title{counts}
 \usage{
-counts(data, hertz = -1, x_axis = 1, y_axis = 2, z_axis = 3)
+counts(data, hertz = -1, x_axis = 1, y_axis = 2, z_axis = 3,
+  time_column = -1, start_time = -1)
 }
 \arguments{
 \item{data}{input accelerometer data, x y z}
@@ -16,9 +17,14 @@ counts(data, hertz = -1, x_axis = 1, y_axis = 2, z_axis = 3)
 \item{y_axis}{indicates the column number which has the data for y direction, the default is 2}
 
 \item{z_axis}{indicates the column number which has the data for z direction, the default is 3}
+
+\item{time_column}{indicates the column number which has the date and time}
+
+\item{start_time}{the start date of the measurement}
 }
 \value{
-Returns a \code{data.table} with three columns: \describe{
+Returns a \code{data.table} with four columns: \describe{
+\item{Time}{The start time of the measurement}
 \item{x}{the number of counts for X axis}
 \item{y}{the number of counts for Y axis}
 \item{z}{the number of counts for Z axis}
@@ -29,8 +35,13 @@ Calculates ActiLife counts based on raw accelerometer data
 }
 \examples{
 {
-\donttest{counts(sampleXYZ,100)}
+\donttest{ ## test with minimum arguments
+counts(sampleXYZ,100)}
+\donttest{
+my_start_time <- "2017-08-22 12:30:10"
+my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)}
 }
+
 
 }
 \seealso{

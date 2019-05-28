@@ -21,7 +21,7 @@ There are two datasets and a main function in this package
  raw accelerometer data for testing \code{counts()} function.
 
  \link{sampleCounts}
- counts calculated by a\code{ctivityCounts} and ActiLife
+ counts calculated by \code{activityCounts} and ActiLife
 }
 \author{
 Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller.

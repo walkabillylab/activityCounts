@@ -7,15 +7,24 @@
 #' @param x_axis indicates the column number which has the data for x direction, the default is 1
 #' @param y_axis indicates the column number which has the data for y direction, the default is 2
 #' @param z_axis indicates the column number which has the data for z direction, the default is 3
+#' @param time_column indicates the column number which has the date and time
+#' @param start_time the start date of the measurement
 #'
 #'
+#' @import magrittr
 #' @import seewave
+#' @importFrom lubridate period
+#' @importFrom lubridate floor_date
+#' @importFrom lubridate as_datetime
+#' @importFrom lubridate now
 #' @importFrom  signal filter
+#' @importFrom  tibble add_column
 #'
 #' @export
 #'
 #'
-#' @return Returns a \code{data.table} with three columns: \describe{
+#' @return Returns a \code{data.table} with four columns: \describe{
+#' \item{Time}{The start time of the measurement}
 #' \item{x}{the number of counts for X axis}
 #' \item{y}{the number of counts for Y axis}
 #' \item{z}{the number of counts for Z axis}
@@ -23,8 +32,13 @@
 #'
 #' @examples
 #' {
-#' \donttest{counts(sampleXYZ,100)}
+#' \donttest{ ## test with minimum arguments
+#' counts(sampleXYZ,100)}
+#' \donttest{ ## start time is given
+#' my_start_time <- "2017-08-22 12:30:10"
+#' my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)}
 #' }
+#'
 #'
 #'@seealso
 #'
@@ -38,13 +52,28 @@
 #'
 counts = function(data,
                   hertz = -1,
-                  x_axis = 1 ,
+                  x_axis = 1,
                   y_axis = 2,
-                  z_axis = 3) {
+                  z_axis = 3,
+                  time_column = -1,
+                  start_time = -1) {
+
   if (hertz == -1) {
     warning("Sampling frequency is not assigned! (The default value is set to 30Hz)")
     hertz = 30
   }
+
+  if (time_column != -1) {
+    start_time = floor_date(x = data[ 1, time_column],unit = "seconds")
+  }
+  else if (start_time == -1) {
+      start_time = floor_date(x = now(),unit = "seconds")
+      warning("Start date is not specified. The current time considered as the start time ")
+  }
+
+  start_time = start_time %>%
+    as_datetime()
+
 
   data = data[, c(x_axis, y_axis, z_axis)]
 
@@ -103,7 +132,15 @@ counts = function(data,
     ) / adcResolution), integN, 0))
 
   }
-
   colnames(out) = c("x", "y", "z")
+
+  sec = period(units = "second",num = 1)
+
+  out_length = nrow(out)
+  out = out %>%
+    as.data.frame() %>%
+    add_column(Time = seq(from = start_time, length.out = out_length, by = sec) ,
+               .before = "x")
+
   return(out)
 }

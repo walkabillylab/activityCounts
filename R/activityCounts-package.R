@@ -14,7 +14,7 @@
 #'  raw accelerometer data for testing \code{counts()} function.
 #'
 #'  \link{sampleCounts}
-#'  counts calculated by a\code{ctivityCounts} and ActiLife
+#'  counts calculated by \code{activityCounts} and ActiLife
 #'
 #'
 #'

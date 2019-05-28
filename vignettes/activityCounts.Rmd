@@ -95,7 +95,7 @@ head(sampleXYZ)
 ## How to calculates counts:
 Now by applying the function `counts()` calculate the counts for sampleXYZ.
 
-```{r}
+```{r eval=FALSE}
 sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100)
 head(sampleXYZ_counts)
 ```
