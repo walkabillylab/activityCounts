@@ -37,7 +37,7 @@ Calculates ActiLife counts based on raw accelerometer data
 {
 \donttest{ ## test with minimum arguments
 counts(sampleXYZ,100)}
-\donttest{
+\donttest{ ## start time is given
 my_start_time <- "2017-08-22 12:30:10"
 my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)}
 }
