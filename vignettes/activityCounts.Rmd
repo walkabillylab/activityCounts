@@ -40,13 +40,13 @@ Although it is not necessary, RStudio makes using R easier. To install the lates
 
 You can install the released version of activityCounts from [CRAN](https://CRAN.R-project.org) with running the following code in the R console:
 
-``` r
+``` {r , eval = FALSE}
 install.packages("activityCounts")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
-``` r
+``` {r}
 # install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
 ```
@@ -65,9 +65,9 @@ To generate the counts, import your data from your source file. Store the data i
 For example, you can use the `fread()` function from the `data.table` package to import your data:
 Note that the dataset must have three columns which X, Y, and Z readings.
 
-``` r
+```{r eval=FALSE}
 # install.packages("data.table")
-raw_accel_data <- data.table::fread("~/your_raw_accelerometer_data.csv)
+raw_accel_data <- data.table::fread("~/your_raw_accelerometer_data.csv")
 ```
 
 
