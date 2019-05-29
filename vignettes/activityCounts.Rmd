@@ -46,8 +46,8 @@ install.packages("activityCounts")
 
 And the development version from [GitHub](https://github.com/) with:
 
-``` {r}
-# install.packages("devtools")
+``` {r eval=FALSE}
+install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
 ```
 
@@ -81,7 +81,7 @@ counts_measures <- activityCounts::counts(data = raw_accel_data, hertz = samplin
 
 Now the variable `counts_measures` contains three columns which indicate the calculated counts for X, Y, and Z axes respectively.
 
-<br>
+
 
 # Example
 ## Check the sample input dataset:
