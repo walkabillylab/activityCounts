@@ -24,17 +24,18 @@ The goal of activityCounts is to calculate ActiLife counts based on the raw acce
 
 [//]: # (You can install the released version of activityCounts from [CRAN](https://CRAN.R-project.org) with:)
 
-```{undefined eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=FALSE}
 install.packages("activityCounts")
 ```
 
 
 You can install the development version from [GitHub](https://github.com/) with:
-
-``` r
+```{r eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
 ```
+
+
 ## How to use
 
 ### Import the accelerometer data 
@@ -50,7 +51,7 @@ View(sampleXYZ)
 ### Calculate counts
 To calculate counts for your data, use the counts() function. Here is an example of using the counts() function. We use sampleXYZ dataset included in the package and then call the counts() function. The sampling frequency of our data is 100 Hz, so we need to pass this value when calling the function counts:
 
-```{r eval=FALSE}
+```{r eval=FALSE, warning=FALSE}
 calculated_output <- counts(data = sampleXYZ, hertz = 100)
 ```
 
@@ -59,7 +60,7 @@ activityCounts is flexible, and it can handle different format. However, to use 
 In this example, the first column has the data for the z-axis, and the fourth column of the data has the data for x-axis, and the sixth column contains the data for the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call the function like this:
  
 
-```{r eval=FALSE}
+```{r eval=FALSE, warning=FALSE}
 calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
 
 ```
@@ -68,7 +69,8 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 In the following example, starting time is given:
 ```{r eval=FALSE}
 my_start_time <- "2017-08-22 12:30:10"
-my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)
+my_counts <- counts(data = sampleXYZ, hertz = 100, start_time = my_start_time)
+
 ```
 
 
