@@ -2,7 +2,7 @@
 #'
 #' Calculates ActiLife counts based on raw accelerometer data
 #'
-#' @param data input accelerometer data, x y z
+#' @param data input accelerometer data
 #' @param hertz sampling frequency, Hz
 #' @param x_axis indicates the column number which has the data for x direction, the default is 1
 #' @param y_axis indicates the column number which has the data for y direction, the default is 2
