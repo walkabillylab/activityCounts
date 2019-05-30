@@ -13,7 +13,6 @@
 #'
 #' @import magrittr
 #' @import seewave
-#' @importFrom lubridate period
 #' @importFrom lubridate floor_date
 #' @importFrom lubridate as_datetime
 #' @importFrom lubridate now
@@ -21,7 +20,6 @@
 #' @importFrom  tibble add_column
 #'
 #' @export
-#'
 #'
 #' @return Returns a \code{data.table} with four columns: \describe{
 #' \item{Time}{The start time of the measurement}
@@ -38,7 +36,6 @@
 #' my_start_time <- "2017-08-22 12:30:10"
 #' my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)}
 #' }
-#'
 #'
 #'@seealso
 #'
@@ -57,51 +54,70 @@ counts = function(data,
                   z_axis = 3,
                   time_column = -1,
                   start_time = -1) {
-
   if (hertz == -1) {
-    warning("Sampling frequency is not assigned! (The default value is set to 30Hz)")
+    warning("Sampling frequency is not assigned! (default value is 30Hz)")
     hertz = 30
   }
 
   if (time_column != -1) {
-    start_time = floor_date(x = data[ 1, time_column],unit = "seconds")
+    start_time = floor_date(x = data[1, time_column], unit = "seconds")
   }
   else if (start_time == -1) {
-      start_time = floor_date(x = now(),unit = "seconds")
-      warning("Start date is not specified. The current time considered as the start time ")
+    start_time = floor_date(x = now(), unit = "seconds")
+    warning("Start date is not specified! (current time is considered as the start time)")
   }
 
   start_time = start_time %>%
     as_datetime()
 
-
   data = data[, c(x_axis, y_axis, z_axis)]
 
   A = c(
-    1,-4.1637,
-    7.5712,-7.9805,
-    5.385,-2.4636,
+    1,
+    -4.1637,
+    7.5712,
+    -7.9805,
+    5.385,
+    -2.4636,
     0.89238,
-    0.06361,-1.3481,
-    2.4734,-2.9257,
-    2.9298,-2.7816,
-    2.4777,-1.6847,
+    0.06361,
+    -1.3481,
+    2.4734,
+    -2.9257,
+    2.9298,
+    -2.7816,
+    2.4777,
+    -1.6847,
     0.46483,
-    0.46565,-0.67312,
-    0.4162,-0.13832,
+    0.46565,
+    -0.67312,
+    0.4162,
+    -0.13832,
     0.019852
   )
+
   B = c(
-    0.049109,-0.12284,
-    0.14356,-0.11269,
-    0.053804,-0.02023,
+    0.049109,
+    -0.12284,
+    0.14356,
+    -0.11269,
+    0.053804,
+    -0.02023,
     0.0063778,
-    0.018513,-0.038154,
-    0.048727,-0.052577,
-    0.047847,-0.046015,
-    0.036283,-0.012977,-0.0046262,
-    0.012835,-0.0093762,
-    0.0034485,-0.00080972,-0.00019623
+    0.018513,
+    -0.038154,
+    0.048727,
+    -0.052577,
+    0.047847,
+    -0.046015,
+    0.036283,
+    -0.012977,
+    -0.0046262,
+    0.012835,
+    -0.0093762,
+    0.0034485,
+    -0.00080972,
+    -0.00019623
   )
 
   deadband = 0.068
@@ -134,13 +150,17 @@ counts = function(data,
   }
   colnames(out) = c("x", "y", "z")
 
-  sec = period(units = "second",num = 1)
-
   out_length = nrow(out)
   out = out %>%
     as.data.frame() %>%
-    add_column(Time = seq(from = start_time, length.out = out_length, by = sec) ,
-               .before = "x")
+    add_column(
+      Time = seq(
+        from = start_time,
+        length.out = out_length,
+        by = "sec"
+      ) ,
+      .before = "x"
+    )
 
   return(out)
 }
