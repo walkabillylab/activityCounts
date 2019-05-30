@@ -7,6 +7,7 @@
 #'
 #'
 #'@format A \code{data.table} with three columns: \describe{
+#'  \item{Time}{Timestamp}
 #'  \item{accelerometer X}{accelerometer data in X direction}
 #'  \item{accelerometer Y}{accelerometer data in Y direction}
 #'  \item{accelerometer Z}{accelerometer data in Z direction}
