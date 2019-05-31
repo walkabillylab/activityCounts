@@ -49,7 +49,7 @@ View(sampleXYZ)
 ```
 
 ### Calculate counts
-To calculate counts for your data, use the counts() function. Here is an example of using the counts() function. We use sampleXYZ dataset included in the package and then call the counts() function. The sampling frequency of our data is 100 Hz, so we need to pass this value when calling the function counts:
+To calculate counts for your data, use the counts() function. Here is an example of using the counts() function. We use sampleXYZ dataset included in the package and then call the counts() function. The sampling frequency of our data is 100Hz, so we need to pass this value when calling the function counts:
 
 ```{r eval=FALSE, warning=FALSE}
 calculated_output <- counts(data = sampleXYZ, hertz = 100)

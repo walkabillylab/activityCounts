@@ -31,10 +31,10 @@ Health and activity researchers have used accelerometers to study people's movem
 
 # How to use
 ## Install R
-Visit <https://www.r-project.org/> to download and install Rsampl.
+Visit [R Project](https://www.r-project.org/) to download and install Rsampl.
 
 ## Install RStudio (recommended)
-Although it is not necessary, RStudio makes using R easier. To install the latest version, go to <https://www.rstudio.com/> and download the installation file based on your operating system.
+Although it is not necessary, RStudio makes using R easier. To install the latest version, go to [RStudio](https://www.rstudio.com/) and download the installation file based on your operating system.
 
 ## Install activityCounts
 

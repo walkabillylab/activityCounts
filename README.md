@@ -18,7 +18,7 @@ You can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+#install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
 ```
 
@@ -43,7 +43,7 @@ View(sampleXYZ)
 To calculate counts for your data, use the counts() function. Here is an
 example of using the counts() function. We use sampleXYZ dataset
 included in the package and then call the counts() function. The
-sampling frequency of our data is 100 Hz, so we need to pass this value
+sampling frequency of our data is 100Hz, so we need to pass this value
 when calling the function counts:
 
 ``` r
