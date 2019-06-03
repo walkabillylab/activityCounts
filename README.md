@@ -1,6 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<style>
+body {
+text-align: justify}
+</style>
+
 # activityCounts
 
 <!-- badges: start -->
@@ -26,12 +31,12 @@ devtools::install_github("walkabillylab/activityCounts")
 
 ### Import the accelerometer data
 
-Note that your dataset should contain three columns. The first column is
-the raw accelerometer data in the x-direction and the second and the
-third columns are raw accelerometer data in y and z-directions,
-respectively. There is sample dataset available with this package which
-you can check to make sure your data format is correct. To see the
-sample dataset run:
+Note that your dataset should contain at least three columns. Typically
+the first column is the raw accelerometer data in the x-direction and
+the second and the third columns are raw accelerometer data in y and
+z-directions, respectively. There is sample dataset available with this
+package, which you can check the sample data format. To see the sample
+dataset run:
 
 ``` r
 library(activityCounts)
