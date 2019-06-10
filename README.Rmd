@@ -82,7 +82,7 @@ my_counts <- counts(data = sampleXYZ, hertz = 100, start_time = my_start_time)
 ```
 
 ### Check the results
-To verify the accuracy of the calculated counts for this particular dataset, you can compare them with the provided sampleCounts dataset. It contains counts calculated by ActiLife software and the counts() function.
+To verify the accuracy of the calculated counts for this particular dataset, you can compare them with the provided `sampleCounts` dataset. It contains counts calculated by ActiLife software and the `counts()` function.
 
 ```{r eval=FALSE}
 summary(sampleCounts)
