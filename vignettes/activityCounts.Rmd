@@ -25,7 +25,7 @@ line-height: 1.8em;
 </style>
 
 # Introduction
-Health and activity researchers have used accelerometers to study people's movement and activity. There are different brands of accelerometers, and one of the most common ones is Actigraph. ActiLife is a closed-source software, which generates activity counts. There are many other accelerometer devices, for which none of them have software to generate activity counts as ActiLife.<br> Since there are many studies done using actigraph counts, [Brond et al.](https://www.ncbi.nlm.nih.gov/pubmed/28604558) developed a [code](https://github.com/jbrond/ActigraphCounts) in MATLAB, which can convert accelerometers data to actigraph counts. Although their work can help researchers to use different accelerometers brands and calculate the counts measure, MATLAB is a commercial program. Unlike MATLAB, R is open-source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actigraph counts very quickly.
+Many research areas use accelerometers to study people's activities including sleep, sedentary behaviour, and physical activity. Actigraph is one of the most common research grade accelerometers. Actigraph accelerometers include ActiLife is a closed-source software, which generates [activity counts](https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf). There is considerable research validating and developing algorithms for human activity using Actilife counts. Unfortunately, Actilife counts are proprietary and difficult to implement if researchers use different accelerometer brands. Recently, [Brond et al.](https://www.ncbi.nlm.nih.gov/pubmed/28604558) developed a [code](https://github.com/jbrond/ActigraphCounts) in MATLAB, which can convert raw accelerometer data to Actilife counts. Their work can help researchers use different accelerometers and calculate Actilife counts, MATLAB is a commercial program. Unlike MATLAB, R is open-source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actilife counts.
 
 <br>
 
@@ -62,12 +62,12 @@ library(activityCounts)
 
 ## Import your data
 To generate the counts, import your data from your source file. Store the data inside a variable so you can pass that the main function of the package, `counts()`. 
-For example, you can use the `fread()` function from the `data.table` package to import your data:
+For example, you can use the `read_csv()` function from the `tidyverse` package to import your data:
 Note that the dataset must have three columns which X, Y, and Z readings.
 
 ```{r eval=FALSE}
-# install.packages("data.table")
-raw_accel_data <- data.table::fread("~/your_raw_accelerometer_data.csv")
+# install.packages("tidyverse")
+raw_accel_data <- tidyverse::read_csv("~/your_raw_accelerometer_data.csv")
 ```
 
 
@@ -102,13 +102,12 @@ head(sampleXYZ_counts)
 
 ### Use your own data:
 
-By default, the first column of your dataset should contain accelerometer data for x-direction, second column for y and the third column for the z-direction. However, you can specifically tell the counts() function which columns have the x, y, and z-direction data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each direction.
-In this example, the first column has the data for the z-axes, and the fourth column of the data has the data for x-axis, and the sixth column contains the data for the y-axis. Therefore, assuming the sampling frequency is 50 Hz, we call the function like this:
+By default, the first column of your dataset should contain accelerometer data for x-axis, second column for y-axis and the third column for the z-axis However, you can specifically tell the counts() function which columns have the x, y, and z-axis data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each axes.
 
+In this example, the first column has the time stamp for the data. The second column has the x-axis data, the third column has the y-axis data, and the fourth column has the z-axis data. Therefore, assuming the sampling frequency is 100 Hz, we call the function like this:
 
 ```{r eval=FALSE}
-calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
-
+calculated_output <- counts(data = your_raw_data, hertz = 100, x_axis = 2, y_axis = 3, z_axis = 4)
 ```
 The default values for x_axis, y_axis, and z_axis are one, two, and three respectively. So if you don't specify them, the function assumes the first column is for the x-axis, the second for the y-axis and the third is for the z-axis.
 
@@ -128,9 +127,9 @@ As the summary shows, the counts calculated by activityCounts package and the so
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
-ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_x_counts, y = activityCounts_x_counts)) + geom_point() 
-ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_y_counts, y = activityCounts_y_counts)) + geom_point() 
-ggplot(data = sampleCounts[1:2700, ], aes(x = ActiLife_z_counts, y = activityCounts_z_counts)) + geom_point()
+ggplot(data = sampleCounts, aes(x = ActiLife_x_counts, y = activityCounts_x_counts)) + geom_point() 
+ggplot(data = sampleCounts, aes(x = ActiLife_y_counts, y = activityCounts_y_counts)) + geom_point() 
+ggplot(data = sampleCounts, aes(x = ActiLife_z_counts, y = activityCounts_z_counts)) + geom_point()
 
 ```
 
