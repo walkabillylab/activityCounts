@@ -104,7 +104,7 @@ head(sampleXYZ_counts)
 
 By default, the first column of your dataset should contain accelerometer data for x-axis, second column for y-axis and the third column for the z-axis However, you can specifically tell the counts() function which columns have the x, y, and z-axis data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each axes.
 
-In this example, the first column has the time stamp for the data. The second column has the x-axis data, the third column has the y-axis data, and the fourth column has the z-axis data. Therefore, assuming the sampling frequency is 100 Hz, we call the function like this:
+In this example code, the first column has the time stamp for the data. The second column has the x-axis data, the third column has the y-axis data, and the fourth column has the z-axis data. Therefore, assuming the sampling frequency is 100 Hz, we call the function like this:
 
 ```{r eval=FALSE}
 calculated_output <- counts(data = your_raw_data, hertz = 100, x_axis = 2, y_axis = 3, z_axis = 4)
