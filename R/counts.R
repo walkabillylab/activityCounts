@@ -51,9 +51,9 @@
 #'
 counts = function(data,
                   hertz = -1,
-                  x_axis = 1,
-                  y_axis = 2,
-                  z_axis = 3,
+                  x_axis = 2,
+                  y_axis = 3,
+                  z_axis = 4,
                   time_column = -1,
                   start_time = -1) {
   if (hertz == -1) {
