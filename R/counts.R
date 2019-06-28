@@ -17,6 +17,8 @@
 #' @importFrom lubridate as_datetime
 #' @importFrom lubridate now
 #' @importFrom  signal filter
+#' @importFrom  signal butter
+#' @importFrom  signal filtfilt
 #' @importFrom  tibble add_column
 #'
 #' @export
