@@ -133,20 +133,21 @@ counts = function(data,
   for (i in 1:3) {
     if (hertz > sf) {
       datares = resamp(data[, i], hertz, sf, 'matrix')
+      datab = bwfilter(
+        datares,
+        f = sf,
+        n = 4,
+        from = 0.01,
+        to = 7,
+        bandpass = TRUE
+      )
     }
     else{
 
       AB = butter(4,c(0.01,7) /(sf/2))
-      datares = filtfilt(AB[1],AB[2],data[, i])
+      datab = filtfilt(AB[1],AB[2],data[, i])
     }
-    datab = bwfilter(
-      datares,
-      f = sf,
-      n = 4,
-      from = 0.01,
-      to = 7,
-      bandpass = TRUE
-    )
+
     B = B * gain
     fx8up = filter(B, A, datab)
     fx8 = pptrunc(fx8up[seq(1, length(fx8up), 3)], peakThreshold)
