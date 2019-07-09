@@ -7,25 +7,24 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r, include = T, echo= FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-
 #### Calculate ActiLife counts from raw acceleration data
 
 <style>
-body{
-text-align : justify;
-line-height: 1.8em;
-}
+  body{
+    text-align : justify;
+    line-height: 1.8em;
+  }
 </style>
-
-# Introduction
-Many research areas use accelerometers to study people's activities including sleep, sedentary behaviour, and physical activity. Actigraph is one of the most common research grade accelerometers. Actigraph accelerometers include ActiLife is a closed-source software, which generates [activity counts](https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf). There is considerable research validating and developing algorithms for human activity using Actilife counts. Unfortunately, Actilife counts are proprietary and difficult to implement if researchers use different accelerometer brands. Recently, [Brond et al.](https://www.ncbi.nlm.nih.gov/pubmed/28604558) developed a [code](https://github.com/jbrond/ActigraphCounts) in MATLAB, which can convert raw accelerometer data to Actilife counts. Their work can help researchers use different accelerometers and calculate Actilife counts, MATLAB is a commercial program. Unlike MATLAB, R is open-source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actilife counts.
+  
+  # Introduction
+  Many research areas use accelerometers to study people's activities including sleep, sedentary behaviour, and physical activity. Actigraph is one of the most common research grade accelerometers. Actigraph accelerometers include ActiLife is a closed-source software, which generates [activity counts](https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf). There is considerable research validating and developing algorithms for human activity using Actilife counts. Unfortunately, Actilife counts are proprietary and difficult to implement if researchers use different accelerometer brands. Recently, [Brond et al.](https://www.ncbi.nlm.nih.gov/pubmed/28604558) developed a [code](https://github.com/jbrond/ActigraphCounts) in MATLAB, which can convert raw accelerometer data to Actilife counts. Their work can help researchers use different accelerometers and calculate Actilife counts, MATLAB is a commercial program. Unlike MATLAB, R is open-source, and also R is very popular among health and activity researchers. The package activityCounts allow users to convert the accelerometer data to Actilife counts.
 
 <br>
 
@@ -88,21 +87,21 @@ Now the variable `counts_measures` contains three columns which indicate the cal
 activityCounts package includes a sample dataset which is available for testing by importing the package. The name of the dataset is `sampleXYZ` and its sampling frequency is 100Hz. To check out sampleXYZ:
 
 ```{r}
-library(activityCounts)
+data("sampleXYZ")
 head(sampleXYZ)
 ```
 
 ## How to calculates counts:
-Now by applying the function `counts()` calculate the counts for sampleXYZ.
+For sampleXYZ data, the first column is X, second is Y, and the third column is the Z axis, therefore when calling the function, specify the columns in the argument section. Now by applying the function `counts()` calculate the counts for sampleXYZ.
 
 ```{r eval=FALSE}
-sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100)
+sampleXYZ_counts <- counts(data = sampleXYZ, hertz = 100 ,x_axis = 1,y_axis = 2,z_axis = 3)
 head(sampleXYZ_counts)
 ```
 
 ### Use your own data:
 
-By default, the first column of your dataset should contain accelerometer data for x-axis, second column for y-axis and the third column for the z-axis However, you can specifically tell the counts() function which columns have the x, y, and z-axis data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each axes.
+By default, the second column of your dataset should contain accelerometer data for x-axis, the third column for y-axis and the forth column for the z-axis However, you can specifically tell the counts() function which columns have the x, y, and z-axis data. Use x_axis, y_axis, and z_axis arguments when calling the function to specify the desired columns for each axes.
 
 In this example code, the first column has the time stamp for the data. The second column has the x-axis data, the third column has the y-axis data, and the fourth column has the z-axis data. Therefore, assuming the sampling frequency is 100 Hz, we call the function like this:
 
@@ -115,21 +114,20 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 ## Compare the sample outputs:
 
 The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes. Finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
-
-
-```{r message=FALSE, warning=FALSE}
+  
+  
+  ```{r message=FALSE, warning=FALSE}
 summary(sampleCounts)
 ```
 
 ## Visualize the difference:
 
 As the summary shows, the counts calculated by activityCounts package and the software ActiLife are very close. In these plots, counts calculated by the package are sketched versus the counts calculated by the ActiLife software. The straight lines show strong correlations: 
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+  
+  ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 ggplot(data = sampleCounts, aes(x = ActiLife_x_counts, y = activityCounts_x_counts)) + geom_point() 
 ggplot(data = sampleCounts, aes(x = ActiLife_y_counts, y = activityCounts_y_counts)) + geom_point() 
 ggplot(data = sampleCounts, aes(x = ActiLife_z_counts, y = activityCounts_z_counts)) + geom_point()
 
 ```
-
