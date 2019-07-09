@@ -72,7 +72,7 @@ our data is 100Hz, so we need to pass this value when calling the
 function counts:
 
 ``` r
-calculated_output <- counts(data = sampleXYZ, hertz = 100)
+calculated_output <- counts(data = sampleXYZ, hertz = 100 ,x_axis = 1,y_axis = 2,z_axis = 3)
 ```
 
 The default value for `hertz()` function is 30. The user should be aware
