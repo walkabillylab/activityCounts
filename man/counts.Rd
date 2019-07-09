@@ -12,11 +12,11 @@ counts(data, hertz = -1, x_axis = 2, y_axis = 3, z_axis = 4,
 
 \item{hertz}{sampling frequency, Hz}
 
-\item{x_axis}{indicates the column number which has the data for x direction, the default is 1}
+\item{x_axis}{indicates the column number which has the data for x direction, the default is 2}
 
-\item{y_axis}{indicates the column number which has the data for y direction, the default is 2}
+\item{y_axis}{indicates the column number which has the data for y direction, the default is 3}
 
-\item{z_axis}{indicates the column number which has the data for z direction, the default is 3}
+\item{z_axis}{indicates the column number which has the data for z direction, the default is 4}
 
 \item{time_column}{indicates the column number which has the date and time}
 
@@ -35,8 +35,8 @@ Calculates ActiLife counts based on raw accelerometer data
 }
 \examples{
 {
-\donttest{ ## test with minimum arguments
-counts(sampleXYZ,100)}
+\donttest{ ## test with the sampleXYZ dataset whitout start_time
+counts(sampleXYZ, hertz = 100,x_axis = 2,y_axis = 3,z_axis = 4)}
 \donttest{ ## start time is given
 my_start_time <- "2017-08-22 12:30:10"
 my_counts <- counts(data = sampleXYZ, hertz = 100,start_time = my_start_time)}
