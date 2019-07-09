@@ -104,16 +104,16 @@ this:
 calculated_output <- counts(data = your_raw_data, hertz = 50, x_axis = 4, y_axis = 6, z_axis = 1)
 ```
 
-The default values for x\_axis, y\_axis, and z\_axis are one, two, and
-three respectively. So if you don’t specify them, the function assumes
-the first column is for the x-axis, the second for the y-axis and the
-third is for the z-axis.
+The default values for x\_axis, y\_axis, and z\_axis are two, three, and
+four respectively. So if you don’t specify them, the function assumes
+the second column is for the x-axis, the third for the y-axis and the
+forth is for the z-axis.  
 
-In the following example, starting time is given:
+For sampleXYZ data, the first column is X, second is Y, and the third column is the Z axis, therefore when calling the function, specify the columns in the argument section. In the following example, starting time is given:
 
 ``` r
 my_start_time <- "2017-08-22 12:30:10"
-my_counts <- counts(data = sampleXYZ, hertz = 100, start_time = my_start_time)
+my_counts <- counts(data = sampleXYZ, hertz = 100, start_time = my_start_time,x_axis = 1,y_axis = 2,z_axis = 3)
 ```
 
 ### Check the results
