@@ -146,7 +146,7 @@ counts = function(data,
     else{
 
       AB = butter(4,c(0.01,7) /(sf/2))
-      datab = filtfilt(AB[1],AB[2],data[, i])
+      datab = filtfilt(AB$b,AB$a,data[, i])
     }
 
     B = B * gain
