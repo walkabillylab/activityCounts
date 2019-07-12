@@ -13,11 +13,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-<style>
-body {
-text-align: justify}
-</style>
-
 # activityCounts
 
 <!-- badges: start -->
