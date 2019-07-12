@@ -4,7 +4,7 @@ Title: Generating ActiLife Counts
 Version: 0.1.0
 Author: Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller
 Maintainer: SeyedJavad KhataeiPour <skhataeipour@mun.ca>
-Description: Creates ActiLife counts based on the raw acceleration data. This package was developed based on the work of  Brond et al. <https://www.ncbi.nlm.nih.gov/pubmed/28604558>. 
+Description: Creates ActiLife counts based on the raw acceleration data. This package was developed based on the work of Brond and others. <https://www.ncbi.nlm.nih.gov/pubmed/28604558>. 
 URL: https://github.com/walkabillylab/activityCounts, https://github.com/jbrond/ActigraphCounts
 BugReports: https://github.com/walkabillylab/activityCounts/issues
 Depends: R (>= 2.10)

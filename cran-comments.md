@@ -34,9 +34,10 @@ Checked for the followings:
 - There were no ERRORs or WARNINGs.   
 - There is only one *NOTE* :  
 Possibly mis-spelled words in DESCRIPTION:  
-ActiLife (3:19, 7:22)  
+  ActiLife (3:19, 7:22)  
+  Brond (7:123) 
 
-#### This is OK, ActiLife is a software's name, and it is not misspelled.
+#### This is OK, **ActiLife** is a software's name, and it is not misspelled. Also **Brond** is a proper name and it is not misspelled.
   
   
 Thank you for your time
