@@ -32,14 +32,14 @@ Many research areas use accelerometers to study people's activities including sl
 
 ## Installation
 
-[//]: # (You can install the released version of activityCounts from [CRAN](https://CRAN.R-project.org) with:)
+You can install the released version of activityCounts from [CRAN](https://CRAN.R-project.org) with:
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE}
 install.packages("activityCounts")
 ```
 
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/walkabillylab/activityCounts) with:
 ```{r eval=FALSE}
 #install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")

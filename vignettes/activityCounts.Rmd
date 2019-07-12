@@ -43,7 +43,7 @@ You can install the released version of activityCounts from [CRAN](https://CRAN.
 install.packages("activityCounts")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+And the development version from [GitHub](https://github.com/walkabillylab/activityCounts) with:
 
 ``` {r eval=FALSE}
 install.packages("devtools")

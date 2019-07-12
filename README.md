@@ -40,8 +40,15 @@ counts.
 
 ## Installation
 
+You can install the released version of activityCounts from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("activityCounts")
+```
+
 You can install the development version from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/walkabillylab/activityCounts) with:
 
 ``` r
 #install.packages("devtools")
