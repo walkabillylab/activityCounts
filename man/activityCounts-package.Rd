@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right'}}
 
-Creates ActiLife counts based on the raw acceleration data. This package was developed based on the work of  Brond et al <https://www.ncbi.nlm.nih.gov/pubmed/28604558>.
+Creates ActiLife counts based on the raw acceleration data. This package was developed based on the work of Brond and others. <https://www.ncbi.nlm.nih.gov/pubmed/28604558>.
 }
 \details{
 There are two datasets and a main function in this package
