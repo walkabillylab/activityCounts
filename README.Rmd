@@ -58,7 +58,7 @@ To calculate counts for your data, use the `counts()` function. Here is an examp
 ```{r eval=FALSE, warning=FALSE}
 calculated_output <- counts(data = sampleXYZ, hertz = 100)
 ```
-The default value for `hertz()` function is 30. The user should be aware of the data sampling frequency and pass the correct value to `hertz()`.
+The default value for `hertz()` function is 30. The user should be aware of the data sampling frequency and pass the correct value to `hertz()`. If the data frequency is less than 30 Hz, first resample your data and increase the frequency to more than 30 Hz and then calculate the counts.
 
 ### Input data format.
 activityCounts is flexible, and it can handle different data formats. However, to use the function, you need to provide x, y, and z raw data. The rest of the arguments are optional. The package assumes x, y, and z raw data are stored in the first, second, and the third columns, respectively. If the order is different use the `x_axis`, `y_axis`, and `z_axis` functions to indicated each column of your input has which one the axes. You should use the `hertz` argument to pass the sampling frequency. The default value for sampling frequency is 30 Hz. If your data contains a column of the time of the measurements, you can use `time_column` argument to indicate your desired column, otherwise, use the `start_time` argument to designate the starting time of your analysis.<br> If none of these methods are used to indicate the start time, the current time is considered as the start time.

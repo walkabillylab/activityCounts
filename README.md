@@ -79,6 +79,8 @@ calculated_output <- counts(data = sampleXYZ, hertz = 100)
 
 The default value for `hertz()` function is 30. The user should be aware
 of the data sampling frequency and pass the correct value to `hertz()`.
+If the data frequency is less than 30 Hz, first resample your data and
+increase the frequency to more than 30 Hz and then calculate the counts.
 
 ### Input data format.
 

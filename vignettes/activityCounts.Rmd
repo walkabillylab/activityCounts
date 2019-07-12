@@ -78,7 +78,7 @@ sampling_frequency <- 100
 counts_measures <- activityCounts::counts(data = raw_accel_data, hertz = sampling_frequency)
 ```
 
-Now the variable `counts_measures` contains three columns which indicate the calculated counts for X, Y, and Z axes respectively.
+Now the variable `counts_measures` contains three columns which indicate the calculated counts for X, Y, and Z axes respectively. If the data frequency is less than 30 Hz, first resample your data and increase the frequency to more than 30 Hz and then calculate the counts.
 
 
 
