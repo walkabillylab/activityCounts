@@ -1,5 +1,24 @@
+## Resubmission
+
 Hello,  
-This is the first submission.
+This is the second submission.
+
+
+### CRAN's first comment by "Uwe Ligges" was:
+
+"Please explain in your Description field:
+What are "ActiLife counts"? If there is a web reference for ActiLife, 
+please add it in the firm <https://......> to the Description field."
+
+### Actions I took
+The Description field is updated according to the instructions.
+
+
+
+
+
+
+
 
 ## Test Environments
 
