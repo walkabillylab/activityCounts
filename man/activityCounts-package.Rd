@@ -8,7 +8,12 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right'}}
 
-Creates ActiLife counts from raw acceleration data. The code was developed based on the study done by Brond and others. (2017) <https://www.ncbi.nlm.nih.gov/pubmed/28604558>.
+ActiLife software generates activity counts from data collected by Actigraph accelerometers <https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf>.
+  Actigraph is one of the most common research-grade accelerometers. There is considerable research
+  validating and developing algorithms for human activity using ActiLife counts. Unfortunately,
+  ActiLife counts are proprietary and difficult to implement if researchers use different accelerometer brands.
+  The code  creates ActiLife counts from raw acceleration data for different accelerometer brands and it is developed
+  based on the study done by Brond and others. (2017) <https://www.ncbi.nlm.nih.gov/pubmed/28604558>.
 }
 \details{
 There are two datasets and a main function in this package

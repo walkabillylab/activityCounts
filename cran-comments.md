@@ -1,17 +1,18 @@
 ## Resubmission
 
 Hello,  
-This is the second submission.
+This is the **second** submission.
 
 
-### CRAN's first comment by "Uwe Ligges" was:
+### CRAN's first feedback by "Uwe Ligges" was:
 
 "Please explain in your Description field:
 What are "ActiLife counts"? If there is a web reference for ActiLife, 
 please add it in the firm <https://......> to the Description field."
 
-### Actions I took
-The Description field is updated according to the instructions.
+### In the second submission:
+The Description field is updated according to the instructions.  
+Also, the version number is increased.
 
 
 
@@ -48,10 +49,19 @@ Checked for the followings:
 - There were no ERRORs or WARNINGs.   
 - There is only one *NOTE* :  
 Possibly mis-spelled words in DESCRIPTION:  
-  ActiLife (3:19, 7:22)  
-  Brond (7:123) 
+  ActiLife (3:17, 12:14, 14:65, 15:3, 16:21)  
+  Actigraph (12:81, 13:3)  
+  Brond (17:30)  
+  accelerometer (15:91, 16:78)  
+  accelerometers (12:91, 13:54)  
+ 
 
-#### This is OK, **ActiLife** is a software's name, and it is not misspelled. Also **Brond** is a proper name and it is not misspelled.
+## Regarding the check results:
+This is OK. I checked them, and none of them is miss-spelling.  
+  **ActiLife** is a software's name.   
+  **Actigraph** is an accelerometer brand.  
+  **Brond** is a proper name.  
+  Also, an **accelerometer** is an instrument for measuring acceleration.  
   
   
 Thank you for your time
