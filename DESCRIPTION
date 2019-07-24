@@ -1,7 +1,7 @@
 Package: activityCounts
 Type: Package
 Title: Generate ActiLife Counts
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person("Ruben", "Brondeel", role = "aut"),
   person("Javad", "Rahimipour Anaraki", role = "aut"),
