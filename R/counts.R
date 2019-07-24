@@ -31,14 +31,20 @@
 #' }
 #'
 #' @examples
-#' {
-#' \donttest{ ## test with the sampleXYZ dataset whitout start_time
-#' counts(sampleXYZ, hertz = 100,x_axis = 1,y_axis = 2,z_axis = 3)}
-#' \donttest{ ## start time is given
-#' my_start_time <- "2017-08-22 12:30:10"
-#' my_counts <- counts(data = sampleXYZ, hertz = 100,
-#' start_time = my_start_time,x_axis = 1,y_axis = 2,z_axis = 3)}
-#' }
+#' # with minimum arguments
+#' counts(data = sampleXYZ,hertz = 100)
+#'
+#' # when start time is given explicitly
+#' study_start_time <- "2017-08-22 12:30:10"
+#' counts(data = sampleXYZ,hertz = 100 , start_time = study_start_time)
+#'
+#' # the data has a time column, which is the first column
+#' counts(data = sampleXYZ,hertz = 100 , time_column = 1)
+#'
+#' # explicitly specify the X, Y and Z axis columns.
+#' counts(data = sampleXYZ,hertz = 100 , x_axis = 2,y_axis = 3, z_axis = 4)
+#'
+#'
 #'
 #'@seealso
 #'
@@ -76,51 +82,31 @@ counts = function(data,
   data = data[, c(x_axis, y_axis, z_axis)]
 
   A = c(
-    1,
-    -4.1637,
-    7.5712,
-    -7.9805,
-    5.385,
-    -2.4636,
+    1,-4.1637,
+    7.5712,-7.9805,
+    5.385,-2.4636,
     0.89238,
-    0.06361,
-    -1.3481,
-    2.4734,
-    -2.9257,
-    2.9298,
-    -2.7816,
-    2.4777,
-    -1.6847,
+    0.06361,-1.3481,
+    2.4734,-2.9257,
+    2.9298,-2.7816,
+    2.4777,-1.6847,
     0.46483,
-    0.46565,
-    -0.67312,
-    0.4162,
-    -0.13832,
+    0.46565,-0.67312,
+    0.4162,-0.13832,
     0.019852
   )
 
   B = c(
-    0.049109,
-    -0.12284,
-    0.14356,
-    -0.11269,
-    0.053804,
-    -0.02023,
+    0.049109,-0.12284,
+    0.14356,-0.11269,
+    0.053804,-0.02023,
     0.0063778,
-    0.018513,
-    -0.038154,
-    0.048727,
-    -0.052577,
-    0.047847,
-    -0.046015,
-    0.036283,
-    -0.012977,
-    -0.0046262,
-    0.012835,
-    -0.0093762,
-    0.0034485,
-    -0.00080972,
-    -0.00019623
+    0.018513,-0.038154,
+    0.048727,-0.052577,
+    0.047847,-0.046015,
+    0.036283,-0.012977,-0.0046262,
+    0.012835,-0.0093762,
+    0.0034485,-0.00080972,-0.00019623
   )
 
   deadband = 0.068
@@ -144,9 +130,8 @@ counts = function(data,
       )
     }
     else{
-
-      AB = butter(4,c(0.01,7) /(sf/2))
-      datab = filtfilt(AB$b,AB$a,data[, i])
+      AB = butter(4, c(0.01, 7) / (sf / 2))
+      datab = filtfilt(AB$b, AB$a, data[, i])
     }
 
     B = B * gain
