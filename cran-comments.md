@@ -1,21 +1,16 @@
 ## Resubmission
 
 Hello,  
-This is the **second** submission.
-
-
-### CRAN's first feedback by "Uwe Ligges" was:
-
-"Please explain in your Description field:
-What are "ActiLife counts"? If there is a web reference for ActiLife, 
-please add it in the firm <https://......> to the Description field."
-
-### In the second submission:
-The Description field is updated according to the instructions.  
-Also, the version number is increased.
+This is the **third** submission.
 
 
 
+### In the third submission:
+I did the following based on the CRAN's second feedback by "Martina Schmirl":
+
+- Added a "doi" with a proper format in the description file.
+- Added three new examples for the main function, counts().
+- Deleted unnecessary examples of the functions that don't get exported.
 
 
 
@@ -57,7 +52,7 @@ Possibly mis-spelled words in DESCRIPTION:
  
 
 ## Regarding the check results:
-This is OK. I checked them, and none of them is miss-spelling.  
+The note is OK. I checked them, and none of them is miss-spelling.  
   **ActiLife** is a software's name.   
   **Actigraph** is an accelerometer brand.  
   **Brond** is a proper name.  
