@@ -39,13 +39,13 @@ counts(data = sampleXYZ,hertz = 100)
 
 # when start time is given explicitly
 study_start_time <- "2017-08-22 12:30:10"
-counts(data = sampleXYZ,hertz = 100 , start_time = study_start_time)
+counts(data = sampleXYZ, hertz = 100 , start_time = study_start_time)
 
 # the data has a time column, which is the first column
-counts(data = sampleXYZ,hertz = 100 , time_column = 1)
+counts(data = sampleXYZ, hertz = 100 , time_column = 1)
 
 # explicitly specify the X, Y and Z axis columns.
-counts(data = sampleXYZ,hertz = 100 , x_axis = 2,y_axis = 3, z_axis = 4)
+counts(data = sampleXYZ, hertz = 100 , x_axis = 2,y_axis = 3, z_axis = 4)
 
 
 
