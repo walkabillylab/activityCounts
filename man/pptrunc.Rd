@@ -17,10 +17,3 @@ the highest(or the lowest) value of "data" and "max_value"
 \description{
 pptrunc
 }
-\examples{
-\donttest{
-pptrunc(data= -3.5, max_value = 3)
-}
-
-
-}

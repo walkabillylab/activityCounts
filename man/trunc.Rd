@@ -17,9 +17,3 @@ returns zero if the "data" is less than the "mean_value" otherwise returns the "
 \description{
 trunc
 }
-\examples{
-\donttest{
-trunc(4,3)
-trunc(2,3)
-}
-}

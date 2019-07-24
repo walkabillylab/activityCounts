@@ -6,11 +6,6 @@
 #' @return returns zero if the "data" is less than the "mean_value" otherwise returns the "data"
 #'
 #'
-#' @examples
-#' \donttest{
-#' trunc(4,3)
-#' trunc(2,3)
-#' }
 trunc = function(data, min_value){
   return(ifelse(data < min_value, 0, data))
 }
