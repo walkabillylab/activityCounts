@@ -13,7 +13,7 @@ ActiLife software generates activity counts from data collected by Actigraph acc
   validating and developing algorithms for human activity using ActiLife counts. Unfortunately,
   ActiLife counts are proprietary and difficult to implement if researchers use different accelerometer brands.
   The code  creates ActiLife counts from raw acceleration data for different accelerometer brands and it is developed
-  based on the study done by Brond and others. (2017) <https://www.ncbi.nlm.nih.gov/pubmed/28604558>.
+  based on the study done by Brond and others (2017) <doi:10.1249/MSS.0000000000001344>.
 }
 \details{
 There are two datasets and a main function in this package
