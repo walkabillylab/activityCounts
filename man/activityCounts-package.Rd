@@ -31,9 +31,7 @@ There are two datasets and a main function in this package
 \author{
 Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller.
 
-\subsection{Maintainers}{SeyedJavad KhataeiPour <skhataeipour@mun.ca>,
- Javad Rahimipour Anaraki <jra066@mun.ca>, Daniel Fuller <dfuller@mun.ca>
- }
+\subsection{Maintainer}{SeyedJavad KhataeiPour \email{skhataeipour@mun.ca}}
 }
 \concept{The main function anf sample datasets}
 \keyword{internal}
