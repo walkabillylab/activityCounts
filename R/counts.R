@@ -34,7 +34,7 @@
 #' }
 #'
 #' @examples
-#' # with minimum arguments
+#' # for tha sampleXYZ dataset, sampling frequency is 100 hz
 #' counts(data = sampleXYZ,hertz = 100)
 #'
 #' # when start time is given explicitly

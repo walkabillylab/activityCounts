@@ -37,7 +37,7 @@ Returns a \code{data.table} with four columns: \describe{
 Calculates ActiLife counts based on raw accelerometer data
 }
 \examples{
-# with minimum arguments
+# for tha sampleXYZ dataset, sampling frequency is 100 hz
 counts(data = sampleXYZ,hertz = 100)
 
 # when start time is given explicitly
