@@ -6,11 +6,11 @@
 #'
 #'
 #'
-#'@format A \code{data.table} with three columns: \describe{
+#'@format A \code{data.table} with four columns: \describe{
 #'  \item{Time}{Timestamp}
-#'  \item{accelerometer X}{accelerometer data in X direction}
-#'  \item{accelerometer Y}{accelerometer data in Y direction}
-#'  \item{accelerometer Z}{accelerometer data in Z direction}
+#'  \item{accelerometer_X}{accelerometer data in X direction}
+#'  \item{accelerometer_Y}{accelerometer data in Y direction}
+#'  \item{accelerometer_Z}{accelerometer data in Z direction}
 #'  }
 #'
 #'@usage sampleXYZ
