@@ -2,13 +2,16 @@
 #'
 #' Calculates ActiLife counts based on raw accelerometer data
 #'
-#' @param data input accelerometer data
-#' @param hertz sampling frequency, Hz
-#' @param x_axis indicates the column number which has the data for x direction, the default is 2
-#' @param y_axis indicates the column number which has the data for y direction, the default is 3
-#' @param z_axis indicates the column number which has the data for z direction, the default is 4
-#' @param time_column indicates the column number which has the date and time
-#' @param start_time the start date of the measurement
+#' @param data Accelerometer data, Must have at least three columns.
+#' @param hertz Sampling frequency in Hz
+#' @param x_axis Indicates the column number which has the accel data for x direction, the default is 2
+#' @param y_axis Indicates the column number which has the accel data for y direction, the default is 3
+#' @param z_axis Indicates the column number which has the accel data for z direction, the default is 4
+#' @param time_column Optional. Indicates the column number which has the date and time.
+#'  The first row will be considered as the start time of the study. You can use the
+#'  "start_time" argument to provide the start time explicitly.
+#' @param start_time Optional. Use this to define the start time of the experiment.
+#'  You can use this argument if the data does not contain a time column.
 #'
 #'
 #' @import magrittr
@@ -82,31 +85,51 @@ counts = function(data,
   data = data[, c(x_axis, y_axis, z_axis)]
 
   A = c(
-    1,-4.1637,
-    7.5712,-7.9805,
-    5.385,-2.4636,
+    1,
+    -4.1637,
+    7.5712,
+    -7.9805,
+    5.385,
+    -2.4636,
     0.89238,
-    0.06361,-1.3481,
-    2.4734,-2.9257,
-    2.9298,-2.7816,
-    2.4777,-1.6847,
+    0.06361,
+    -1.3481,
+    2.4734,
+    -2.9257,
+    2.9298,
+    -2.7816,
+    2.4777,
+    -1.6847,
     0.46483,
-    0.46565,-0.67312,
-    0.4162,-0.13832,
+    0.46565,
+    -0.67312,
+    0.4162,
+    -0.13832,
     0.019852
   )
 
   B = c(
-    0.049109,-0.12284,
-    0.14356,-0.11269,
-    0.053804,-0.02023,
+    0.049109,
+    -0.12284,
+    0.14356,
+    -0.11269,
+    0.053804,
+    -0.02023,
     0.0063778,
-    0.018513,-0.038154,
-    0.048727,-0.052577,
-    0.047847,-0.046015,
-    0.036283,-0.012977,-0.0046262,
-    0.012835,-0.0093762,
-    0.0034485,-0.00080972,-0.00019623
+    0.018513,
+    -0.038154,
+    0.048727,
+    -0.052577,
+    0.047847,
+    -0.046015,
+    0.036283,
+    -0.012977,
+    -0.0046262,
+    0.012835,
+    -0.0093762,
+    0.0034485,
+    -0.00080972,
+    -0.00019623
   )
 
   deadband = 0.068

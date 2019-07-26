@@ -8,19 +8,22 @@ counts(data, hertz = -1, x_axis = 2, y_axis = 3, z_axis = 4,
   time_column = -1, start_time = -1)
 }
 \arguments{
-\item{data}{input accelerometer data}
+\item{data}{Accelerometer data, Must have at least three columns.}
 
-\item{hertz}{sampling frequency, Hz}
+\item{hertz}{Sampling frequency in Hz}
 
-\item{x_axis}{indicates the column number which has the data for x direction, the default is 2}
+\item{x_axis}{Indicates the column number which has the accel data for x direction, the default is 2}
 
-\item{y_axis}{indicates the column number which has the data for y direction, the default is 3}
+\item{y_axis}{Indicates the column number which has the accel data for y direction, the default is 3}
 
-\item{z_axis}{indicates the column number which has the data for z direction, the default is 4}
+\item{z_axis}{Indicates the column number which has the accel data for z direction, the default is 4}
 
-\item{time_column}{indicates the column number which has the date and time}
+\item{time_column}{Optional. Indicates the column number which has the date and time.
+The first row will be considered as the start time of the study. You can use the
+"start_time" argument to provide the start time explicitly.}
 
-\item{start_time}{the start date of the measurement}
+\item{start_time}{Optional. Use this to define the start time of the experiment.
+You can use this argument if the data does not contain a time column.}
 }
 \value{
 Returns a \code{data.table} with four columns: \describe{
