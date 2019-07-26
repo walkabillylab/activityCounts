@@ -11,6 +11,7 @@ I did the following based on the CRAN's second feedback by "Martina Schmirl":
 - Added a "doi" with a proper format in the description file.
 - Added three new examples for the main function, counts().
 - Deleted unnecessary examples of the functions that don't get exported.
+- Increased the version.
 
 
 
@@ -51,7 +52,7 @@ Possibly mis-spelled words in DESCRIPTION:
   accelerometers (12:91, 13:54)  
  
 
-## Regarding the check results:
+### Regarding the check results:
 The note is OK. I checked them, and none of them is miss-spelling.  
   **ActiLife** is a software's name.   
   **Actigraph** is an accelerometer brand.  

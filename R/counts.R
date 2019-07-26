@@ -34,8 +34,8 @@
 #' }
 #'
 #' @examples
-#' # for tha sampleXYZ dataset, sampling frequency is 100 hz
-#' counts(data = sampleXYZ,hertz = 100)
+#' # for tha sampleXYZ dataset, sampling frequency is 100 Hz
+#' counts(data = sampleXYZ, hertz = 100)
 #'
 #' # when start time is given explicitly
 #' study_start_time <- "2017-08-22 12:30:10"
