@@ -142,7 +142,9 @@ counts = function(data,
 
   for (i in 1:3) {
     if (hertz > sf) {
-      datares = resamp(data[, i], hertz, sf, 'matrix')
+      n = nrow(data)
+      r = hertz/sf
+      datares = data[seq(1, n, by = r), i]
       datab = bwfilter(
         datares,
         f = sf,
