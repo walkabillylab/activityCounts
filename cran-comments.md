@@ -9,7 +9,7 @@ This is the **third** submission.
 I did the following based on the CRAN's second feedback by "Martina Schmirl":
 
 - Added a "doi" with a proper format in the description file.
-- Added three new examples for the main function, counts().
+- Added three unwrapped examples for the main function, counts().
 - Deleted unnecessary examples of the functions that don't get exported.
 - Increased the version.
 
