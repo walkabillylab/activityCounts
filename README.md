@@ -13,7 +13,7 @@ status](https://travis-ci.org/walkabillylab/activityCounts.svg?branch=master)](h
 downloads](https://cranlogs.r-pkg.org/badges/activityCounts)](https://cran.r-project.org/package=activityCounts)
 <!-- badges: end -->
 
-# Introduction
+## Introduction
 
 Many research areas use accelerometers to study people’s activities
 including sleep, sedentary behaviour, and physical activity. Actigraph
