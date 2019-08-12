@@ -7,6 +7,10 @@
 
 [![Travis build
 status](https://travis-ci.org/walkabillylab/activityCounts.svg?branch=master)](https://travis-ci.org/walkabillylab/activityCounts)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/activityCounts)](https://cran.r-project.org/package=activityCounts)
 <!-- badges: end -->
 
 # Introduction
