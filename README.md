@@ -69,6 +69,10 @@ library(activityCounts)
 View(sampleXYZ)
 ```
 
+#### Acceleration units:
+
+To use the package, if your acceleration is reported in the SI units(m/s2), divide it by 9.80665. If your sensor measures acceleration in the Imperial system(ft/s2), divide it by 32.17405 ft/s2. If your sensor returns acceleration relative to gravity (standard gravity), similar to what Actigraph does, it does not need any modification.
+
 ### Calculate counts
 
 To calculate counts for your data, use the `counts()` function. Here is
