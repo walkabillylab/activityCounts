@@ -8,4 +8,4 @@
 
 # activityCounts 0.1.3
 
-* 2022-03-29 - Revised version to ensure that order of x,y,z columns does not impact the result. **Not released on CRAN**
+* 2022-03-29 - Revised version to ensure that order of x,y,z columns does not impact the result. We recommend that you still use the `x_axis`, `y_axis`, and `z_axis` functions to specify the location of your columns. **Not released on CRAN**
