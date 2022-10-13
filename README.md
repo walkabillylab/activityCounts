@@ -7,8 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/walkabillylab/activityCounts.svg?branch=master)](https://travis-ci.org/walkabillylab/activityCounts)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/activityCounts)](https://cran.r-project.org/package=activityCounts)
-[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/activityCounts)](https://cran.r-project.org/package=activityCounts)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/activityCounts)](https://cran.r-project.org/package=activityCounts)
 <!-- badges: end -->
@@ -32,21 +32,26 @@ researchers use different accelerometers and calculate Actilife counts,
 MATLAB is a commercial program. Unlike MATLAB, R is open-source, and
 also R is very popular among health and activity researchers. The
 package activityCounts allow users to convert the accelerometer data to
-Actilife
-counts.
+Actilife counts.
 
 ### The goal of activityCounts is to calculate ActiLife counts based on the raw acceleration data.
 
 ## Installation
 
-You can install the released version of activityCounts from
+Please see
+[CHANGELOG.md](https://github.com/walkabillylab/activityCounts/blob/master/CHANGELOG.md)
+for a differences between the current CRAN release (0.1.2) and the
+development version (0.1.3). The current development version will be
+submitted to CRAN shortly.
+
+You can install the version 0.1.2 of activityCounts from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("activityCounts")
 ```
 
-You can install the development version from
+You can install the development version 0.1.3 from
 [GitHub](https://github.com/walkabillylab/activityCounts) with:
 
 ``` r
@@ -68,10 +73,6 @@ you can check the sample data format. To see the sample dataset run:
 library(activityCounts)
 View(sampleXYZ)
 ```
-
-#### Acceleration units:
-
-To use the package, if your acceleration is reported in the SI units(m/s2), divide it by 9.80665. If your sensor measures acceleration in the Imperial system(ft/s2), divide it by 32.17405 ft/s2. If your sensor returns acceleration relative to gravity (standard gravity), similar to what Actigraph does, it does not need any modification.
 
 ### Calculate counts
 
@@ -109,14 +110,13 @@ time, the current time is considered as the start time.
 In this example code, the first column has the time stamp for the data.
 The second column has the x-axis data, the third column has the y-axis
 data, and the fourth column has the z-axis data. Therefore, assuming the
-sampling frequency is 100 Hz, we call the function like
-this:
+sampling frequency is 100 Hz, we call the function like this:
 
 ``` r
 calculated_output <- counts(data = your_raw_data, hertz = 100, x_axis = 2, y_axis = 3, z_axis = 4)
 ```
 
-The default values for x\_axis, y\_axis, and z\_axis are one, two, and
+The default values for x_axis, y_axis, and z_axis are one, two, and
 three respectively. So if you don’t specify them, the function assumes
 the first column is for the x-axis, the second for the y-axis and the
 third is for the z-axis.
