@@ -81,7 +81,7 @@ counts = function(data,
 
   start_time = start_time %>%
     as_datetime()
-
+  data = as.data.frame(data)
   data = data[, c(x_axis, y_axis, z_axis)]
 
   A = c(
@@ -161,6 +161,7 @@ counts = function(data,
     }
 
     fx8up = filter(B, A, datab)
+
     fx8 = pptrunc(fx8up[seq(1, length(fx8up), 3)], peakThreshold)
     out = cbind(out, runsum(floor(trunc(
       abs(fx8), deadband
