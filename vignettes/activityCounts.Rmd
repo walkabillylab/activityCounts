@@ -114,8 +114,8 @@ The default values for x_axis, y_axis, and z_axis are one, two, and three respec
 ## Compare the sample outputs:
 
 The other dataset that comes with this package has nine columns; the first three columns are the raw accelerometer data from sampleXYZ, the next three columns are the counts calculated by the counts() function for X, Y, and Z axes. Finally, the last three columns are counts calculated by the ActiLife software. To check the data run the following:
-  
-  
+
+
 ```{r message=FALSE, warning=FALSE}
 summary(sampleCounts)
 ```
