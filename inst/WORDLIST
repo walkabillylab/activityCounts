@@ -1,3 +1,4 @@
+accel
 accelerometer
 accelerometers
 Actigraph
@@ -16,6 +17,7 @@ doi
 et
 https
 jra
+metacran
 MSS
 pptrunc
 Rahimipour
@@ -24,5 +26,6 @@ RStudio
 runsum
 sampleXYZ
 skhataeipour
+tibble
 trunc
 wp
