@@ -27,7 +27,31 @@ Checked for the followings:
 
 
 ## Check results:
-- There were no ERRORs, WARNINGs, or NOTES   
+- There were no ERRORs, WARNINGs
+- Notes are as follows: 
+    -  checking CRAN incoming feasibility ... [6s/22s] NOTE
+        - Maintainer: ‘SeyedJavad KhataeiPour <skhataeipour@mun.ca>’
+        - As noted above we need to change the maintainer
+
+    - New submission
+        - Package was archived on CRAN
+        - New maintainer will keep things moving and update so the package is not archived. 
+        
+    - Possibly misspelled words in DESCRIPTION:
+        - ActiLife (3:17, 12:14, 14:65, 15:3, 16:21)
+        - Actigraph (12:81, 13:3)
+        - Brond (17:30)
+        - accelerometer (15:91, 16:78)
+        - accelerometers (12:91, 13:54)
+        
+        - Words are correct
+
+    - CRAN repository db overrides:
+        - X-CRAN-Comment: Archived on 2022-10-17 as issues were not corrected
+    despite reminders.
+
+- checking HTML version of manual ... NOTE
+    - Skipping checking HTML validation: no command 'tidy' found
 
  
   
