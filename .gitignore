@@ -1,6 +1,9 @@
 .Rproj.user
 .Rhistory
 .RData
+.DS_Store
+.Rbuildignore
+.github/
 .Ruserdata
 inst/doc
 doc
