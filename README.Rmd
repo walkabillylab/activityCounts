@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/activityCounts)](https://cran.r-project.org/package=activityCounts)
 [![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/activityCounts)](https://cran.r-project.org/package=activityCounts)
 [![metacran downloads](https://cranlogs.r-pkg.org/badges/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![R-CMD-check](https://github.com/walkabillylab/activityCounts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/walkabillylab/activityCounts/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Introduction
@@ -30,7 +31,7 @@ Many research areas use accelerometers to study people's activities including sl
 
 ## Installation
 
-Please see [CHANGELOG.md](https://github.com/walkabillylab/activityCounts/blob/master/CHANGELOG.md) for a differences between the current CRAN release (0.1.2) and the development version (0.1.3). The current development version will be submitted to CRAN shortly. 
+Please see [CHANGELOG.md](https://github.com/walkabillylab/activityCounts/blob/master/CHANGELOG.md) for a differences between the current CRAN release (0.1.2) and the development version (0.2.0). The current development version will be submitted to CRAN shortly. 
 
 You can install the version 0.1.2 of activityCounts from [CRAN](https://CRAN.R-project.org) with:
 

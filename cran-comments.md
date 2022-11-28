@@ -1,21 +1,14 @@
-## Resubmission
+## Submission of version 0.2.0
 
 Hello,  
-This is the **third** submission.
+This is the **first** submission of version 0.2.0.
 
+### In the first submission:
 
-
-### In the third submission:
-I did the following based on the CRAN's second feedback by "Martina Schmirl":
-
-- Added a "doi" with a proper format in the description file.
-- Added three unwrapped examples for the main function, counts().
-- Deleted unnecessary examples of the functions that don't get exported.
-- Increased the version.
-
-
-
-
+* Ensure that order of x,y,z columns does not impact the result. We recommend that you still use the `x_axis`, `y_axis`, and `z_axis` functions to specify the location of your columns (See Issue "Counts are not agnostic to labeling of axis #5"). 
+* We also edited an error with the gain function. Bug fixed in gain multiplication inside function counts, breaking consistency with previous versions of the code. (See Issue "Gain changing during loop #3"). 
+* We also fixed an error with the output needed to be converted to a dataframe (see "Error when passing data in tibble format. #4"). There is more work to be done to update this. 
+* Finally we need to changed the maintainer to be able to address concerns more quickly as previous maintainer has moved to a new position. The new maintainer is in the update files. . 
 
 ## Test Environments
 
@@ -25,13 +18,6 @@ I did the following based on the CRAN's second feedback by "Martina Schmirl":
 2. R-release
 3. R-oldrelease
 
-
-
-### On Travis CI
-
-1. Checked in *Linux* for both old releases and release 
-2. Checked in *OSX* for both old releases and release
-
 ### With Rhub
 Checked for the followings:
   
@@ -40,24 +26,33 @@ Checked for the followings:
 3. Fedora Linux, R-devel, GCC
 
 
-
 ## Check results:
-- There were no ERRORs or WARNINGs.   
-- There is only one *NOTE* :  
-Possibly mis-spelled words in DESCRIPTION:  
-  ActiLife (3:17, 12:14, 14:65, 15:3, 16:21)  
-  Actigraph (12:81, 13:3)  
-  Brond (17:30)  
-  accelerometer (15:91, 16:78)  
-  accelerometers (12:91, 13:54)  
- 
+- There were no ERRORs, WARNINGs
+- Notes are as follows: 
+    -  checking CRAN incoming feasibility ... [6s/22s] NOTE
+        - Maintainer: ‘SeyedJavad KhataeiPour <skhataeipour@mun.ca>’
+        - As noted above we need to change the maintainer
 
-### Regarding the check results:
-The note is OK. I checked them, and none of them is miss-spelling.  
-  **ActiLife** is a software's name.   
-  **Actigraph** is an accelerometer brand.  
-  **Brond** is a proper name.  
-  Also, an **accelerometer** is an instrument for measuring acceleration.  
-  
+    - New submission
+        - Package was archived on CRAN
+        - New maintainer will keep things moving and update so the package is not archived. 
+        
+    - Possibly misspelled words in DESCRIPTION:
+        - ActiLife (3:17, 12:14, 14:65, 15:3, 16:21)
+        - Actigraph (12:81, 13:3)
+        - Brond (17:30)
+        - accelerometer (15:91, 16:78)
+        - accelerometers (12:91, 13:54)
+        
+        - Words are correct
+
+    - CRAN repository db overrides:
+        - X-CRAN-Comment: Archived on 2022-10-17 as issues were not corrected
+    despite reminders.
+
+- checking HTML version of manual ... NOTE
+    - Skipping checking HTML validation: no command 'tidy' found
+
+ 
   
 Thank you for your time
