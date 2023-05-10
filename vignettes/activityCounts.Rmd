@@ -31,8 +31,8 @@ Many research areas use accelerometers to study people's activities including sl
 ## Install R
 Visit [R Project](https://www.r-project.org/) to download and install R.
 
-## Install RStudio (recommended)
-Although it is not necessary, RStudio makes using R easier. To install the latest version, go to [RStudio](https://www.rstudio.com/) and download the installation file based on your operating system.
+## Install POSIT (recommended)
+Although it is not necessary, RStudio Desktop makes using R easier. To install the latest version, go to [POSIT](https://posit.co/products/open-source/rstudio/) and download the installation file based on your operating system.
 
 ## Install activityCounts
 
