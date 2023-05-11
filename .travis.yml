@@ -13,4 +13,4 @@ os:
   - linux
   - osx
 
- install: travis_wait 25 mvn install
+install: travis_wait 25 mvn install
