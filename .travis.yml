@@ -3,8 +3,6 @@
 language: R
 cache: packages
 
-
-
 language: r
 r:
   - oldrel
@@ -14,3 +12,5 @@ r:
 os:
   - linux
   - osx
+
+ install: travis_wait 25 mvn install
