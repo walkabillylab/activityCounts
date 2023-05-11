@@ -9,7 +9,7 @@
 #'
 #'
 
-pptrunc = function(data, max_value){
+pptrunc <- function(data, max_value){
   outd = ifelse(data > max_value, max_value, data)
   return(ifelse(outd < - max_value, - max_value, outd))
 }
