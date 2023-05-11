@@ -6,7 +6,7 @@
 #' @return returns zero if the "data" is less than the "mean_value" otherwise returns the "data"
 #'
 #'
-trunc = function(data, min_value){
+trunc <- function(data, min_value){
   return(ifelse(data < min_value, 0, data))
 }
 
