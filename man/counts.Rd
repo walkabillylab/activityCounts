@@ -4,8 +4,15 @@
 \alias{counts}
 \title{counts}
 \usage{
-counts(data, hertz = -1, x_axis = 2, y_axis = 3, z_axis = 4,
-  time_column = -1, start_time = -1)
+counts(
+  data,
+  hertz = -1,
+  x_axis = 2,
+  y_axis = 3,
+  z_axis = 4,
+  time_column = -1,
+  start_time = -1
+)
 }
 \arguments{
 \item{data}{Accelerometer data, Must have at least three columns.}

@@ -4,7 +4,8 @@
 \name{sampleCounts}
 \alias{sampleCounts}
 \title{The counts calculated by activityCounts and ActiLife based on included raw accelerometer data}
-\format{A \code{data.table} with nine columns: \describe{
+\format{
+A \code{data.table} with nine columns: \describe{
  \item{Time}{Date and time}
  \item{activityCounts_x_counts}{counts calculated by \code{counts()} function in X direction}
  \item{activityCounts_y_counts}{counts calculated by \code{counts()} function in Y direction}
@@ -12,7 +13,8 @@
  \item{ActiLife_x_counts}{counts calculated by ActiLife software in X direction}
  \item{ActiLife_y_counts}{counts calculated by ActiLife software in Y direction}
  \item{ActiLife_z_counts}{counts calculated by ActiLife software in Z direction}
- }}
+ }
+}
 \usage{
 sampleCounts
 }

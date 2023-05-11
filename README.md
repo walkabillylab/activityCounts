@@ -6,11 +6,12 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/walkabillylab/activityCounts.svg?branch=master)](https://travis-ci.org/walkabillylab/activityCounts)
+status](https://app.travis-ci.com/walkabillylab/activityCounts.svg?branch=master)](https://travis-ci.org/walkabillylab/activityCounts)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/activityCounts)](https://cran.r-project.org/package=activityCounts)
 [![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/activityCounts)](https://cran.r-project.org/package=activityCounts)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/activityCounts)](https://cran.r-project.org/package=activityCounts)
+[![R-CMD-check](https://github.com/walkabillylab/activityCounts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/walkabillylab/activityCounts/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Introduction
@@ -25,7 +26,7 @@ There is considerable research validating and developing algorithms for
 human activity using Actilife counts. Unfortunately, Actilife counts are
 proprietary and difficult to implement if researchers use different
 accelerometer brands. Recently, [Brond et
-al.](https://www.ncbi.nlm.nih.gov/pubmed/28604558) developed a
+al.](https://pubmed.ncbi.nlm.nih.gov/28604558/) developed a
 [code](https://github.com/jbrond/ActigraphCounts) in MATLAB, which can
 convert raw accelerometer data to Actilife counts. Their work can help
 researchers use different accelerometers and calculate Actilife counts,
@@ -39,9 +40,9 @@ Actilife counts.
 ## Installation
 
 Please see
-[CHANGELOG.md](https://github.com/walkabillylab/activityCounts/blob/master/CHANGELOG.md)
+[NEWS.md](https://github.com/walkabillylab/activityCounts/blob/master/NEWS.md)
 for a differences between the current CRAN release (0.1.2) and the
-development version (0.1.3). The current development version will be
+development version (0.2.0). The current development version will be
 submitted to CRAN shortly.
 
 You can install the version 0.1.2 of activityCounts from
@@ -51,7 +52,7 @@ You can install the version 0.1.2 of activityCounts from
 install.packages("activityCounts")
 ```
 
-You can install the development version 0.1.3 from
+You can install the development version 0.2.0 from
 [GitHub](https://github.com/walkabillylab/activityCounts) with:
 
 ``` r

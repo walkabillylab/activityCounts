@@ -4,12 +4,14 @@
 \name{sampleXYZ}
 \alias{sampleXYZ}
 \title{Raw accelerometer data for the activityCounts package}
-\format{A \code{data.table} with four columns: \describe{
+\format{
+A \code{data.table} with four columns: \describe{
  \item{Time}{Timestamp}
  \item{accelerometer_X}{accelerometer data in X direction}
  \item{accelerometer_Y}{accelerometer data in Y direction}
  \item{accelerometer_Z}{accelerometer data in Z direction}
- }}
+ }
+}
 \usage{
 sampleXYZ
 }
