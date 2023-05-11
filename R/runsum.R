@@ -6,7 +6,7 @@
 #'
 #' @return returns a
 #'
-runsum = function(data, len, threshold){
+runsum <- function(data, len, threshold){
   N = length(data)
   cnt = ceiling(N/len)
   rs = rep(0, cnt)
