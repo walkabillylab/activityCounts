@@ -59,7 +59,7 @@
 #'
 #'
 #'
-counts = function(data,
+counts <- function(data,
                   hertz = -1,
                   x_axis = 2,
                   y_axis = 3,
@@ -79,12 +79,12 @@ counts = function(data,
     warning("Start date is not specified! (current time is considered as the start time)")
   }
 
-  start_time = start_time %>%
+  start_time <- start_time %>%
     as_datetime()
   data = as.data.frame(data)
   data = data[, c(x_axis, y_axis, z_axis)]
 
-  A = c(
+  A <- c(
     1,
     -4.1637,
     7.5712,
@@ -108,7 +108,7 @@ counts = function(data,
     0.019852
   )
 
-  B = c(
+  B <- c(
     0.049109,
     -0.12284,
     0.14356,
@@ -132,14 +132,14 @@ counts = function(data,
     -0.00019623
   )
 
-  deadband = 0.068
-  sf = 30
-  peakThreshold = 2.13
-  adcResolution = 0.0164
-  integN = 10
-  gain = 0.965
-  out = NULL
-  B = B * gain
+  deadband <- 0.068
+  sf <- 30
+  peakThreshold <- 2.13
+  adcResolution <- 0.0164
+  integN <- 10
+  gain <- 0.965
+  out <- NULL
+  B <- B * gain
 
   for (i in 1:3) {
     if (hertz > sf) {
@@ -168,7 +168,7 @@ counts = function(data,
     ) / adcResolution), integN, 0))
 
   }
-  colnames(out) = c("x", "y", "z")
+  colnames(out) <- c("x", "y", "z")
 
   out_length = nrow(out)
   out = out %>%
