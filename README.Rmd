@@ -39,7 +39,6 @@ You can install the version 0.1.2 of activityCounts from [CRAN](https://CRAN.R-p
 install.packages("activityCounts")
 ```
 
-
 You can install the development version 0.2.0 from [GitHub](https://github.com/walkabillylab/activityCounts) with:
 ```{r eval=FALSE}
 #install.packages("devtools")
@@ -51,7 +50,6 @@ devtools::install_github("walkabillylab/activityCounts")
 
 ### Import the accelerometer data 
 Your dataset should contain at least three columns. Typically the first column is the raw accelerometer data for the x-axis and the second and the third columns are raw accelerometer data for the y and z-axes, respectively. There is sample dataset available with this package, which you can check the sample data format. To see the sample dataset run:
-
 
 ```{r eval=FALSE}
 library(activityCounts)
@@ -88,7 +86,6 @@ To verify the accuracy of the calculated counts for this particular dataset, you
 ```{r eval=FALSE}
 summary(sampleCounts)
 ```
-
 
 To see the package help page run:
 ```{r eval=FALSE}
