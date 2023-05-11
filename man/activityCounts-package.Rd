@@ -6,14 +6,9 @@
 \alias{activityCounts-package}
 \title{activityCounts: Generate ActiLife Counts}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-ActiLife software generates activity counts from data collected by Actigraph accelerometers <https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf>.
-  Actigraph is one of the most common research-grade accelerometers. There is considerable research
-  validating and developing algorithms for human activity using ActiLife counts. Unfortunately,
-  ActiLife counts are proprietary and difficult to implement if researchers use different accelerometer brands.
-  The code  creates ActiLife counts from raw acceleration data for different accelerometer brands and it is developed
-  based on the study done by Brond and others (2017) <doi:10.1249/MSS.0000000000001344>.
+ActiLife software generates activity counts from data collected by Actigraph accelerometers \url{https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf}. Actigraph is one of the most common research-grade accelerometers. There is considerable research validating and developing algorithms for human activity using ActiLife counts. Unfortunately, ActiLife counts are proprietary and difficult to implement if researchers use different accelerometer brands. The code creates ActiLife counts from raw acceleration data for different accelerometer brands and it is developed based on the study done by Brond and others (2017) \doi{10.1249/MSS.0000000000001344}.
 }
 \details{
 There are two datasets and a main function in this package
@@ -31,7 +26,7 @@ There are two datasets and a main function in this package
 \author{
 Ruben Brondeel, Javad Rahimipour Anaraki, SeyedJavad KhataeiPour, Daniel Fuller.
 
-\subsection{Maintainer}{SeyedJavad KhataeiPour \email{skhataeipour@mun.ca}}
+\subsection{Maintainer}{Daniel Fuller \email{daniel.fuller@usask.ca}}
 }
-\concept{The main function anf sample datasets}
+\concept{The main function and sample datasets}
 \keyword{internal}
