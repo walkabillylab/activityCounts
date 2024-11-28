@@ -29,3 +29,8 @@ jobs:
       with:
         r-version: 'latest'
 
+    - name: Install R dependencies
+      run: |
+        Rscript -e "if (!requireNamespace('remotes', quietly = TRUE)) install.packages('remotes')"
+        Rscript -e "remotes::install_deps(dependencies = TRUE)"
+
