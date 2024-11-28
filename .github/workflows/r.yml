@@ -34,3 +34,6 @@ jobs:
         Rscript -e "if (!requireNamespace('remotes', quietly = TRUE)) install.packages('remotes')"
         Rscript -e "remotes::install_deps(dependencies = TRUE)"
 
+    - name:  Run R tests
+      run: |
+        Rscript -e "testthat::test_dir('tests')"
