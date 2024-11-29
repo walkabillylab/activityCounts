@@ -35,5 +35,5 @@ jobs:
         Rscript -e "remotes::install_deps(dependencies = TRUE)"
 
     - name:  Run R tests
-      run: |
-        Rscript -e "testthat::test_dir('tests')"
+      run: 
+        Rscript -e "testthat::test-counts('tests')"
