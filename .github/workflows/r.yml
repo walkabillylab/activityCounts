@@ -37,3 +37,4 @@ jobs:
     - name:  Run R tests
       run: 
         Rscript -e "testthat::test_file('tests/testthat/test-counts.R')"
+        Rscript -e "testthat::test_file('tests/testthat/test-reordering.R')"
