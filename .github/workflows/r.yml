@@ -45,3 +45,8 @@ jobs:
       run: 
         Rscript -e "testthat::test_file('tests/testthat/test-counts.R')"
         Rscript -e "testthat::test_file('tests/testthat/test-reordering.R')"
+
+    - name: Check the package
+      run: |
+          R CMD build .
+          R CMD check *.tar.gz --no-manual --as-cran
