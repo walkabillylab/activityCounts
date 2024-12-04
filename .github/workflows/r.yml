@@ -64,8 +64,14 @@ jobs:
         Rscript -e "testthat::test_file('tests/testthat/test-reordering.R')"
 
 
-    - name: Check the package
+  # Build the package based on os
+    - name: Build the package (Linux/macOS)
+      if: matrix.config.os != 'windows-latest'
+      run: |
+        R CMD build .
+
+    - name: Build the package (Windows)
+      if: matrix.config.os == 'windows-latest'
       shell: cmd
       run: |
-          R CMD build .
-     
+        R CMD build .
