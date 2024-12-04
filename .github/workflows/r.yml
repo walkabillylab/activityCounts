@@ -65,6 +65,7 @@ jobs:
 
 
     - name: Check the package
+      shell: cmd
       run: |
           R CMD build .
      
