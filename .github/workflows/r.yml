@@ -36,6 +36,11 @@ jobs:
       with:
         r-version: 'latest'
 
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update || true
+        sudo apt-get install -y libcurl4-openssl-dev libxml2-dev libssl-dev
+
     - name: Install R dependencies
       run: |
         Rscript -e "if (!requireNamespace('remotes', quietly = TRUE)) install.packages('remotes')"
@@ -45,6 +50,7 @@ jobs:
       run: 
         Rscript -e "testthat::test_file('tests/testthat/test-counts.R')"
         Rscript -e "testthat::test_file('tests/testthat/test-reordering.R')"
+
 
     - name: Check the package
       run: |
