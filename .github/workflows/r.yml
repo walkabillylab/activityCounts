@@ -36,12 +36,6 @@ jobs:
       with:
         r-version: 'latest'
 
-    - name: Update and reinstall Homebrew dependencies
-      run: |
-          unset HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK
-          brew update
-          brew reinstall pkgconf libxml2 openssl
-
     - name: Install R dependencies
       run: |
         Rscript -e "if (!requireNamespace('remotes', quietly = TRUE)) install.packages('remotes')"
