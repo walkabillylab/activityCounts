@@ -87,4 +87,4 @@ jobs:
       if: matrix.config.os == 'windows-latest'
       shell: cmd
       run: |
-        FOR /F "tokens=*" %i IN ('dir /b *.tar.gz') DO SET PKG_TAR=%i && R CMD check "%PKG_TAR%" --no-manual --as-cran
+        FOR /F "tokens=*" %%i IN ('dir /b *.tar.gz') DO SET PKG_TAR=%%i && R CMD check "%%PKG_TAR%" --no-manual --as-cran
