@@ -48,6 +48,11 @@ jobs:
       run: |
         brew install pandoc
 
+    - name: Install Pandoc for Windows
+      if: matrix.config.os == 'windows-latest'
+      run: |
+        choco install pandoc -y
+
     - name: Install R dependencies
       run: |
         Rscript -e "if (!requireNamespace('remotes', quietly = TRUE)) install.packages('remotes')"
