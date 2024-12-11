@@ -43,14 +43,15 @@ jobs:
         sudo apt-get update -y || true
         sudo apt-get install -y pandoc pandoc-citeproc
 
-    - name: Install system dependencies for macOS
+    - name: Set up system dependencies for macOS
       if: matrix.config.os == 'macOS-latest'
       run: |
         brew update
-        brew install pkg-config || brew reinstall pkg-config
-        brew install pandoc
-        brew cleanup
-        brew doctor
+        brew untap homebrew/cask || true
+        brew untap homebrew/core || true
+        brew uninstall openssl@1.1 ruby@3.0 || true
+        brew install openssl@3 ruby pkg-config pandoc || brew reinstall pkg-config pandoc
+        brew cleanup || true
 
     - name: Install Pandoc for Windows
       if: matrix.config.os == 'windows-latest'
