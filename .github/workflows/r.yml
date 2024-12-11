@@ -49,9 +49,9 @@ jobs:
         brew update
         brew untap homebrew/cask || true
         brew untap homebrew/core || true
-        brew uninstall openssl@1.1 ruby@3.0 || true
-        brew install openssl@3 ruby pkg-config pandoc || brew reinstall pkg-config pandoc
-        brew cleanup || true
+        brew uninstall --ignore-dependencies pkg-config openssl@1.1 ruby@3.0 || true
+        brew install openssl@3 ruby pkg-config pandoc || brew reinstall openssl@3 ruby pkg-config pandoc
+        brew cleanup
 
     - name: Install Pandoc for Windows
       if: matrix.config.os == 'windows-latest'
