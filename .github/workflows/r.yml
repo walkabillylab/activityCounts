@@ -47,10 +47,8 @@ jobs:
       if: matrix.config.os == 'macOS-latest'
       run: |
         brew update
-        brew untap homebrew/cask || true
-        brew untap homebrew/core || true
-        brew uninstall --ignore-dependencies pkg-config openssl@1.1 ruby@3.0 || true
-        brew install openssl@3 ruby pkg-config pandoc || brew reinstall openssl@3 ruby pkg-config pandoc
+        brew uninstall pkg-config || true
+        brew install pkg-config pandoc
         brew cleanup
 
     - name: Install Pandoc for Windows
