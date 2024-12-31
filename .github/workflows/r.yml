@@ -6,6 +6,14 @@
 # See https://github.com/r-lib/actions/tree/master/examples#readme for
 # additional example workflows available for the R community.
 
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
+# See https://github.com/r-lib/actions/tree/master/examples#readme for
+# additional example workflows available for the R community.
+
 name: R
 
 on:
@@ -43,13 +51,10 @@ jobs:
         sudo apt-get update -y || true
         sudo apt-get install -y pandoc pandoc-citeproc
 
-    - name: Set up system dependencies for macOS
+    - name: Install system dependencies (macOS)
       if: matrix.config.os == 'macOS-latest'
       run: |
-        brew update
-        brew uninstall pkg-config || true
-        brew install pkg-config pandoc
-        brew cleanup
+        brew install pandoc
 
     - name: Install Pandoc for Windows
       if: matrix.config.os == 'windows-latest'
