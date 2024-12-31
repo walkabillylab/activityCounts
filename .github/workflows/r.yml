@@ -54,9 +54,6 @@ jobs:
     - name: Install system dependencies (macOS)
       if: matrix.config.os == 'macOS-latest'
       run: |
-        brew link pkgconf
-        brew install qpdf pkgconf checkbashisms ghostscript
-        brew reinstall pkgconf
         brew install pandoc
 
     - name: Install Pandoc for Windows
