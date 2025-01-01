@@ -62,9 +62,8 @@ jobs:
     - name: Install system dependencies (macOS)
       if: matrix.config.os == 'macOS-latest'
       run: |
-        brew update
-        brew upgrade
-        brew install pandoc
+        brew install libxml2 curl
+        brew link --overwrite libxml2 curl
 
     - name: Install Pandoc for Windows
       if: matrix.config.os == 'windows-latest'
@@ -98,6 +97,9 @@ jobs:
     - name: Check the package (Linux/macOS)
       if: matrix.config.os != 'windows-latest'
       run: |
+        echo "Running R CMD build"
+        R CMD build .
+        echo "Running R CMD check"
         PKG_TAR=$(ls *.tar.gz)
         R CMD check "$PKG_TAR" --no-manual --as-cran
 
