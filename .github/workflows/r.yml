@@ -112,5 +112,8 @@ jobs:
       if: matrix.config.os == 'windows-latest'
       shell: cmd
       run: |
+        dir /b *.tar.gz > tarball.txt
+        set /p PKG_TAR=<tarball.txt
+        echo Checking package %PKG_TAR%
         R CMD check %PKG_TAR% --no-manual --as-cran
     
