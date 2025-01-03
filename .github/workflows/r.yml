@@ -62,7 +62,6 @@ jobs:
     - name: Install system dependencies (macOS)
       if: matrix.config.os == 'macOS-latest'
       run: |
-        brew reinstall pkgconf
         brew install pandoc
 
     - name: Install Pandoc for Windows
@@ -103,7 +102,11 @@ jobs:
         PKG_TAR=$(ls *.tar.gz)
         R CMD check "$PKG_TAR" --no-manual --as-cran
 
-    
+    - name: Debug Build Output (Windows)
+      if: matrix.config.os == 'windows-latest'
+      shell: cmd
+      run: |
+        dir /b *.tar.gz || echo "No .tar.gz file found after build"
 
     - name: Check the package (Windows)
       if: matrix.config.os == 'windows-latest'
