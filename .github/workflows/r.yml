@@ -44,7 +44,8 @@ jobs:
       with:
         r-version: ${{ matrix.config.r }}
       if: matrix.config.os == 'macOS-latest'
-        brew reinstall pkgconf
+      run: |
+          brew reinstall pkgconf
         
     # Install system dependencies required for R packages
     - name: Install system dependencies (Linux)
