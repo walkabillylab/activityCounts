@@ -28,8 +28,8 @@ jobs:
     strategy:
       matrix:
         config:
-          - { os: ubuntu-latest, r: 'devel' }
-          - { os: ubuntu-latest, r: 'release' }
+          - { os: ubuntu-22.04, r: 'devel' }
+          - { os: ubuntu-22.04, r: 'release' }
           - { os: macOS-latest, r: 'next' }
           - { os: windows-latest, r: 'release' }
     steps:
@@ -41,18 +41,16 @@ jobs:
         r-version: ${{ matrix.config.r }}
     # Install system dependencies for Ubuntu
     - name: Install system dependencies (Ubuntu)
-      if: matrix.config.os == 'ubuntu-latest'
+      if: startsWith(matrix.config.os, 'ubuntu')
       run: |
-        echo "Preparing for Ubuntu 24.04 transition"
-        sudo apt-get update -y || true
+        sudo apt-get update -y
         sudo apt-get install -y pandoc
-    # Suppress version warnings for Ubuntu
-    - name: Suppress Warning
-      if: matrix.config.os == 'ubuntu-latest'
-      run: echo "Ignoring version transition warning for Ubuntu 24.04"
+    - name: Suppress Transition Warnings
+      if: startsWith(matrix.config.os, 'ubuntu')
+      run: echo "Suppressing Ubuntu transition warnings"
     # Debug Installed Tools for Ubuntu
     - name: Debug Installed Tools (Ubuntu)
-      if: matrix.config.os == 'ubuntu-latest'
+      if: startsWith(matrix.config.os, 'ubuntu')
       run: |
         echo "R version:"
         Rscript -e "R.version"
@@ -65,7 +63,12 @@ jobs:
       run: |
         brew update
         brew install pandoc
-        brew reinstall pkgconf # Reinstall pkgconf to ensure the correct version
+        if brew list pkgconf &>/dev/null; then
+          echo "pkgconf is already installed and up-to-date"
+        else
+          echo "Installing pkgconf"
+          brew install pkgconf
+        fi
         echo "pkgconf version:"
         pkg-config --version
     # Debug Installed Tools for macOS
