@@ -52,11 +52,6 @@ jobs:
         sudo apt-get update -y || true
         sudo apt-get install -y pandoc
 
-    #newst version is coming out Jan 17.  
-    - name: Suppress Warning
-      if: matrix.config.os == 'ubuntu-latest'
-      run: echo "Ignoring version transition warning"
-
     - name: Debug Installed Tools
       run: |
        echo "R version:"
