@@ -39,7 +39,7 @@ jobs:
       
     # Use the latest version of setup-r that includes the fix for pkgconf
     - name: Set up R (latest version)
-      uses: r-lib/actions/setup-r@v2
+      uses: r-lib/actions/setup-r@v2.11.1
       with:
         r-version: ${{ matrix.config.r }}
         
