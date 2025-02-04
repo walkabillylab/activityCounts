@@ -2,6 +2,7 @@ Package: activityCounts
 Type: Package
 Title: Generate ActiLife Counts
 Version: 0.2.1
+Maintainer:[Daniel Fuller] <daniel.fuller@usask.ca>
 Authors@R: c(
   person("Ruben", "Brondeel", role = "aut"),
   person("Javad", "Rahimipour Anaraki", role = "aut"),  
