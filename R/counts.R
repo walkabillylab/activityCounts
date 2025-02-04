@@ -47,7 +47,7 @@
 #' # explicitly specify the X, Y and Z axis columns.
 #' counts(data = sampleXYZ, hertz = 100 , x_axis = 2,y_axis = 3, z_axis = 4)
 #'
-#'
+#'Dev branch test
 #'
 #'@seealso
 #'
