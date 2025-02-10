@@ -2,12 +2,11 @@ Package: activityCounts
 Type: Package
 Title: Generate ActiLife Counts
 Version: 0.2.1
-Maintainer:[Daniel Fuller] <daniel.fuller@usask.ca>
 Authors@R: c(
   person("Ruben", "Brondeel", role = "aut"),
   person("Javad", "Rahimipour Anaraki", role = "aut"),  
-  person("Daniel", "Fuller", role = c("aut", "cph"), email = "daniel.fuller@usask.ca"),
-  person("SeyedJavad", "KhataeiPour", role = c("aut", "cre"), email = "skhataeipour@mun.ca"),
+  person("Daniel", "Fuller", role = c("aut", "cph", "cre"), email = "daniel.fuller@usask.ca"),
+  person("SeyedJavad", "KhataeiPour", role = c("aut"), email = "skhataeipour@mun.ca"),
   person(family = "Beap Lab", role = "cph")
   )
 Description: ActiLife software generates activity counts from data collected by Actigraph accelerometers <https://s3.amazonaws.com/actigraphcorp.com/wp-content/uploads/2017/11/26205758/ActiGraph-White-Paper_What-is-a-Count_.pdf>.
