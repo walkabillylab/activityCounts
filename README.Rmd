@@ -30,15 +30,15 @@ Many research areas use accelerometers to study people's activities including sl
 
 ## Installation
 
-Please see [NEWS.md](https://github.com/walkabillylab/activityCounts/blob/master/NEWS.md) for a differences between the current CRAN release (0.1.2) and the development version (0.2.0). The current development version will be submitted to CRAN shortly. 
+Please see [NEWS.md](https://github.com/walkabillylab/activityCounts/blob/master/NEWS.md) for a differences between the current CRAN release (0.2.0) and the development version (0.2.1). The current development version will be submitted to CRAN shortly. 
 
-You can install the version 0.1.2 of activityCounts from [CRAN](https://CRAN.R-project.org) with:
+You can install the version 0.2.1 of activityCounts from [CRAN](https://CRAN.R-project.org) with:
 
 ```{r eval=FALSE}
 install.packages("activityCounts")
 ```
 
-You can install the development version 0.2.0 from [GitHub](https://github.com/walkabillylab/activityCounts) with:
+You can install the development version 0.2.1 from [GitHub](https://github.com/walkabillylab/activityCounts) with:
 ```{r eval=FALSE}
 #install.packages("devtools")
 devtools::install_github("walkabillylab/activityCounts")
